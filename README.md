@@ -91,6 +91,8 @@ $ git remote -v
 .
 ```
 
+***NOTE: If you are repeatedly asked to add '--app' to a Heroku command, or are told to supply a Heroku application name while running a Heroku command, it may mean the `heroku` remote is not set.***  Please confirm, and if necessary fix the Heroku remote as instructed above.
+
 Deploy the project to your Heroku application.
 
 ```
@@ -203,7 +205,7 @@ Delete the app
 $ heroku apps:destroy --app appname
 ```
 
-***You should always use the command line to delete Heroku apps.*** It removes the heroku remote from the local Git repo, and avoids the problems discussed earlier in Heroku create section. ***Do not delete Heroku apps via the web UI.***
+***Note: You should always use the command line to delete Heroku apps.*** It removes the heroku remote from the local Git repo, and avoids the problems discussed earlier in Heroku create section. ***Do not delete Heroku apps via the web UI.***
 
 You can explore the deployed application's database with the PostgreSQL client `psql` running on Heroku.
 ---
