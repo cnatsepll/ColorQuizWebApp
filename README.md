@@ -165,7 +165,7 @@ Add the Heroku Profile beanset, `<beans profile="heroku">` shown below to the ap
 .
 <!-- Add the "heroku" beanset to connect to the Heroku Postgres database when running your application on Heroku. -->
 <!-- Note: There is no need to modify the Heroku beanset. It should work as-is. -->
-```
+
 <beans profile="heroku">
     <bean class="java.net.URI" id="dbUrl">
         <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
