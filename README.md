@@ -43,10 +43,32 @@ Navigate to your Java Project, and confirm that `pom.xml` has the Heroku `<plugi
 
 ```
 <plugin>
-    <groupId>com.heroku.sdk</groupId>
-    <artifactId>heroku-maven-plugin</artifactId>
-    <version>1.0.3</version>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <version>2.3</version>
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <goals><goal>copy</goal></goals>
+            <configuration>
+                <artifactItems>
+                    <artifactItem>
+                        <groupId>com.github.jsimone</groupId>
+                        <artifactId>webapp-runner-main</artifactId>
+                        <version>8.5.15.1</version>
+                        <destFileName>webapp-runner.jar</destFileName>
+                    </artifactItem>
+                </artifactItems>
+            </configuration>
+        </execution>
+    </executions>
 </plugin>
+```
+
+Add a file called `Procfile` in the same directory as the pom.xml file in the root of your application. Give it the following contents:
+
+```
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT target/*.war
 ```
 
 Create a Heroku application (`HEROKU_APPNAME`) for your project.  
@@ -96,15 +118,15 @@ $ git remote -v
 Deploy the project to your Heroku application.
 
 ```
-$ mvn clean heroku:deploy-war
+$ git push heroku master
 ```
 
-***Note: You need to redeploy the project using the `mvn clean heroku:deploy-war` command every time you make a local change that you want to push up to Heroku.***
+***Note: You need to redeploy the project by commit all your changes and using the `git push heroku master` command every time you make a local change that you want to push up to Heroku.***
 
 Deploy Database for Your Application to Heroku *(Optional)*
 ===
 
-Attach an instance of PostgreSQL to your Heroku application.
+Attach an instance of PostgreSQL to your Heroku application. ***This might have happened by default. You can check this from your heroku.com dashboard.***
 
 ```
 $ heroku addons:create heroku-postgresql:hobby-dev
@@ -143,6 +165,7 @@ Add the Heroku Profile beanset, `<beans profile="heroku">` shown below to the ap
 .
 <!-- Add the "heroku" beanset to connect to the Heroku Postgres database when running your application on Heroku. -->
 <!-- Note: There is no need to modify the Heroku beanset. It should work as-is. -->
+```
 <beans profile="heroku">
     <bean class="java.net.URI" id="dbUrl">
         <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
@@ -173,7 +196,7 @@ SPRING_PROFILES_ACTIVE: heroku
 Finally, redeploy the app on Heroku once all the database related changes have been made.
 
 ```
-$ mvn clean heroku:deploy-war
+$ git push heroku master
 ```
 
 Fun and Interesting Things to Know
