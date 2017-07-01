@@ -121,7 +121,7 @@ Deploy the project to your Heroku application.
 $ git push heroku master
 ```
 
-***Note: You need to redeploy the project by commit all your changes and using the `git push heroku master` command every time you make a local change that you want to push up to Heroku.***
+***Note: You need to redeploy the project by committing all your changes and using the `git push heroku master` command every time you make a local change that you want to push up to Heroku.***
 
 Deploy Database for Your Application to Heroku *(Optional)*
 ===
@@ -196,6 +196,7 @@ SPRING_PROFILES_ACTIVE: heroku
 Finally, redeploy the app on Heroku once all the database related changes have been made.
 
 ```
+$ git commit -a -m"Add heroku database configuration"
 $ git push heroku master
 ```
 
