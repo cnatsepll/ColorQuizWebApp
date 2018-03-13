@@ -1,0 +1,105 @@
+wCharity
+wChivalry
+wCommunity
+wCooperation
+wCourt System
+wDefense
+wGovernment
+wHonor
+wLaw
+wLight
+wMilitary
+wOrganization
+wPolitics
+wPurity
+wReligion
+wSelf-sacrifice
+wStrategy
+wCourage 
+wDecisive
+wFocus
+wPeace
+uTechnology
+uManipulation
+uComplexity
+uMemory
+uTrickery
+uControl
+uMind/Thought
+uArtifice
+uBooks & Information
+uMan-Made Items
+uTelepathy
+uIllusion
+uAcademics
+uSubtlety
+uArtifacts
+uPassivity
+uCold (attitude)
+uArtificial
+uProgress
+uCuriosity
+uPerfection
+bDeceit
+bParasitism
+bDisease
+bCorruption
+bPain
+bDarkness
+bDecay/Entropy
+bDemoralize
+bImpurity/Contamination
+bFear
+bUnscrupulous
+bReduction
+bAmorality
+bManipulation
+bIndividualism
+bDismantling
+bSacrifice of Others
+bSelf Sacrifice
+bSelf-Absorbed
+bAmbition
+bPower
+rRomance
+rRandomness
+rDestruction
+rMischievousness
+rMight
+rSpontaneity
+rBrutality
+rChaos
+rImpulse
+rMood Swings
+rBarbarism
+rViolence
+rFighting
+rEmotion
+rHumor
+rEmpathy
+rSentiment
+rAffection
+rRenown
+rPassion
+rFreedom
+gWisdom
+gSpiritualism
+gInstinct
+gReality (existence)
+gAncestry
+gInterdependence
+gThe Past.
+gNature (and natural things)
+gAnimals
+gGrowth
+gCommunity
+gPlants
+gLife
+gTradition
+gMysticism
+gIntuition
+gStubborn
+gFortitude
+gHeritage
+gDestiny
+gAcceptance

@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Hello Spring MVC</title>
+		<title>Color Quiz</title>
 	</head>
 	<body>
-		<h1>Hello, <c:out value="${param.name}" />!</h1>
+		<h1>Walk the Planes</h1>
 	</body>
 </html>
