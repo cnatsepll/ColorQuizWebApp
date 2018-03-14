@@ -12,10 +12,12 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
-import com.benz.quizClasses.SetupDao;
 import com.benz.quizClasses.Setup;
+import com.benz.quizClasses.SetupDao;
 
+@Component
 public class JDBCSetupDao implements SetupDao {
 	
 	private JdbcTemplate jdbcTemplate;
@@ -51,6 +53,7 @@ public class JDBCSetupDao implements SetupDao {
 		jdbcTemplate.update(removeFromGreen);
 	}
 	
+
 	@Override
 	public Map<Integer, List> fillQuestionsTablesReturnQuestionQuiz(List<String> filePaths) throws FileNotFoundException {
 		Map<Integer, List> colorQuiz = new HashMap<>();
