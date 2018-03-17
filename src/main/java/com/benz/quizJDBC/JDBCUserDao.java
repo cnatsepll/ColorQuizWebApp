@@ -10,8 +10,10 @@ import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
 import com.benz.quizClasses.User;
+import com.benz.quizClasses.UserDao;
+
 @Component
-public class JDBCUserDao {
+public class JDBCUserDao implements UserDao{
 	private JdbcTemplate jdbcTemplate;
 
 	@Autowired

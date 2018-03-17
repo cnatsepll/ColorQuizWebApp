@@ -26,7 +26,7 @@ public class ColorQuiz {
 	boolean timeToGo = false;
 	int questionCounter = 0;
 	private int userId;
-	
+	private String question;
 //	public static void main(String[] args) throws FileNotFoundException {
 //		BasicDataSource dataSource = new BasicDataSource();
 //		dataSource.setUrl("jdbc:postgresql://localhost:5432/color_quiz_database");
@@ -65,8 +65,15 @@ public class ColorQuiz {
 		String question = quiz.getQuestion(colorQuiz, lineArray, i, key);
 		questionList.add(question);
 		questionList.add(colorTypeKey);
+		setQuestion(questionList);
 		return questionList;
 		}
+	}
+	public String getQuestion() {
+		return question;
+	}
+	public void setQuestion(List<String> questionList) {
+		question = questionList.get(0);
 	}
 	public void setupQuiz(Map<Integer, List> colorQuiz) {
 		Map<String, Integer> colorResult = new HashMap<>();
@@ -81,7 +88,7 @@ public class ColorQuiz {
 				setTimeToGo(true);
 				break;
 				}
-			while (!validAnswer) {
+//			while (!validAnswer) {
 //				System.out.println("");
 //				if (questionCounter >= 10) {
 //					System.out.println("Press '0' at anytime to quit");
@@ -121,7 +128,7 @@ public class ColorQuiz {
 //					System.out.println("Please enter a number between 1(lowest) and 5(highest) to continue");
 					validAnswer = false;
 				}
-			}
+//			}
 			colorResult.put(colorTypeKey, quiz.storeResult(colorResult, colorTypeKey, answer));
 			questionCounter++;
 		}
