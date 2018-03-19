@@ -62,7 +62,7 @@ public class JDBCSetupDao implements SetupDao {
 			try (Scanner lineReader = new Scanner(csvKey.openStream())) {
 				while (lineReader.hasNextLine()) {
 					String line = lineReader.nextLine();
-					String lineArray[] = line.split(",");
+					String lineArray[] = line.split(line.substring(0, 1));
 					String readLine = lineArray[0];
 					if (i == 0) {
 						String sqlInsertPost = "INSERT INTO white_questions(question_word) VALUES (?)";
