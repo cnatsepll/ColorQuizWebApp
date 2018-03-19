@@ -10,11 +10,11 @@ public class Setup {
 
 	public List<URL> getFilePaths() {
 		List<URL>filePaths = new ArrayList<>();
-		 String whiteQuestionsFilePath = "https://github.com/cnatsepll/ColorQuizQuestions/blob/master/whiteKeyed.csv";
-		 String blueQuestionsFilePath = "https://github.com/cnatsepll/ColorQuizQuestions/blob/master/blueKeyed.csv";
-		 String blackQuestionsFilePath = "https://github.com/cnatsepll/ColorQuizQuestions/blob/master/blackKeyed.csv";
-		 String redQuestionsFilePath = "https://github.com/cnatsepll/ColorQuizQuestions/blob/master/redKeyed.csv";
-		 String greenQuestionsFilePath = "https://github.com/cnatsepll/ColorQuizQuestions/blob/master/greenKeyed.csv";
+		 String whiteQuestionsFilePath = "https://raw.githubusercontent.com/cnatsepll/ColorQuizQuestions/master/whiteKeyed.csv";
+		 String blueQuestionsFilePath = "https://raw.githubusercontent.com/cnatsepll/ColorQuizQuestions/master/blueKeyed.csv";
+		 String blackQuestionsFilePath = "https://raw.githubusercontent.com/cnatsepll/ColorQuizQuestions/master/blackKeyed.csv";
+		 String redQuestionsFilePath = "https://raw.githubusercontent.com/cnatsepll/ColorQuizQuestions/master/redKeyed.csv";
+		 String greenQuestionsFilePath = "https://raw.githubusercontent.com/cnatsepll/ColorQuizQuestions/master/greenKeyed.csv";
 		try {
 			URL whiteURL = new URL(whiteQuestionsFilePath);
 			filePaths.add(whiteURL);
