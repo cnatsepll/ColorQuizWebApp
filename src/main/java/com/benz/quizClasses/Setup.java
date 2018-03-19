@@ -10,11 +10,11 @@ import java.util.Scanner;
 
 public class Setup {
 
-	private String whiteQuestionsFilePath = "/Users/nlckbenz/colorQuizFiles/whiteKeyed.csv";
-	private String blueQuestionsFilePath = "/Users/nlckbenz/colorQuizFiles/blueKeyed.csv";
-	private String blackQuestionsFilePath = "/Users/nlckbenz/colorQuizFiles/blackKeyed.csv";
-	private String redQuestionsFilePath = "/Users/nlckbenz/colorQuizFiles/redKeyed.csv";
-	private String greenQuestionsFilePath = "/Users/nlckbenz/colorQuizFiles/greenKeyed.csv";
+	private String whiteQuestionsFilePath = "http://localhost:8080/Users/nlckbenz/colorQuizFiles/whiteKeyed.csv";
+	private String blueQuestionsFilePath = "http://localhost:8080/Users/nlckbenz/colorQuizFiles/blueKeyed.csv";
+	private String blackQuestionsFilePath = "http://localhost:8080/Users/nlckbenz/colorQuizFiles/blackKeyed.csv";
+	private String redQuestionsFilePath = "http://localhost:8080/Users/nlckbenz/colorQuizFiles/redKeyed.csv";
+	private String greenQuestionsFilePath = "http://localhost:8080/Users/nlckbenz/colorQuizFiles/greenKeyed.csv";
 	
 	
 	private	List<String> filePaths = new ArrayList<>(); // Keyed csv's live here
