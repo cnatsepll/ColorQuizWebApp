@@ -8,5 +8,8 @@
 	<body>
 		<h1>Here are your results!</h1>
 		<c:out value="${results}"/>
+		<div>
+		<a href="/">Return to the homepage</a>
+		</div>
 	</body>
 </html>

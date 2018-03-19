@@ -238,21 +238,16 @@ public class Quiz {
 		} else if (greenCounter == firstPlace && redCounter == secondPlace) {
 			mage += "Green/Red Mage (Welcome to the Gruul Clans)";
 		}
-
-		
-		System.out.println("white counter" + whiteCounter);
-		System.out.println("blue counter" + blueCounter);
-		System.out.println("black counter" + blackCounter);
-		System.out.println("red counter" + redCounter);
-		System.out.println("green counter" + greenCounter);
-
-		System.out.println("firstPlace" + firstPlace);
-		System.out.println("secondPlace" + secondPlace);
-		System.out.println("thirdPlace" + thirdPlace);
-		System.out.println("fourthPlace" + fourthPlace);
-		System.out.println("fifthPlace" + fifthPlace);
-
-
+//		System.out.println("white counter" + whiteCounter);
+//		System.out.println("blue counter" + blueCounter);
+//		System.out.println("black counter" + blackCounter);
+//		System.out.println("red counter" + redCounter);
+//		System.out.println("green counter" + greenCounter);
+//		System.out.println("firstPlace" + firstPlace);
+//		System.out.println("secondPlace" + secondPlace);
+//		System.out.println("thirdPlace" + thirdPlace);
+//		System.out.println("fourthPlace" + fourthPlace);
+//		System.out.println("fifthPlace" + fifthPlace);
 		String results = " <<Your scores are>> | White: " + whiteCounter + " | Blue: " + blueCounter + " | Black: "
 				+ blackCounter + " | Red: " + redCounter + " | Green: " + greenCounter + " | <You answered " + questionCounter
 				+ " questions>";
