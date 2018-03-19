@@ -16,7 +16,6 @@ public class Setup {
 	private String redQuestionsFilePath = "/Users/nlckbenz/colorQuizFiles/redKeyed.csv";
 	private String greenQuestionsFilePath = "/Users/nlckbenz/colorQuizFiles/greenKeyed.csv";
 	
-	
 	private	List<String> filePaths = new ArrayList<>(); // Keyed csv's live here
 
 
