@@ -1,20 +1,23 @@
 package com.benz.quizClasses;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+
+import javax.print.DocFlavor.URL;
 
 public class Setup {
 
-	private String whiteQuestionsFilePath = "https://github.com/cnatsepll/ColorQuizQuestions/blob/master/blackKeyed.csv";
-	private String blueQuestionsFilePath = "/Users/nlckbenz/colorQuizFiles/blueKeyed.csv";
-	private String blackQuestionsFilePath = "/Users/nlckbenz/colorQuizFiles/blackKeyed.csv";
-	private String redQuestionsFilePath = "/Users/nlckbenz/colorQuizFiles/redKeyed.csv";
-	private String greenQuestionsFilePath = "/Users/nlckbenz/colorQuizFiles/greenKeyed.csv";
+	private String whiteQuestionsFilePath = "https://github.com/cnatsepll/ColorQuizQuestions/blob/master/whiteKeyed.csv";
+	URL whiteURL = new URL(whiteQuestionsFilePath);
+	private String blueQuestionsFilePath = "https://github.com/cnatsepll/ColorQuizQuestions/blob/master/blueKeyed.csv";
+	URL blueURL = new URL(blueQuestionsFilePath);
+	private String blackQuestionsFilePath = "https://github.com/cnatsepll/ColorQuizQuestions/blob/master/blackKeyed.csv";
+	URL blackURL = new URL(blackQuestionsFilePath);
+	private String redQuestionsFilePath = "https://github.com/cnatsepll/ColorQuizQuestions/blob/master/redKeyed.csv";
+	URL redURL = new URL(redQuestionsFilePath);
+	private String greenQuestionsFilePath = "https://github.com/cnatsepll/ColorQuizQuestions/blob/master/greenKeyed.csv";
+	URL greenURL = new URL(greenQuestionsFilePath);
+	
 	
 	private	List<String> filePaths = new ArrayList<>(); // Keyed csv's live here
 
