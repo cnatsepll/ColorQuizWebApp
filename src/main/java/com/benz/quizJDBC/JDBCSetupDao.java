@@ -2,6 +2,8 @@ package com.benz.quizJDBC;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,14 +30,9 @@ public class JDBCSetupDao implements SetupDao {
 	}
 
 	@Override
-	public List<String> createFilePathsList() {
+	public List<URL> createFilePathsList() {
 		Setup runSetup = new Setup();
-		List<String> filePaths = runSetup.getFilePaths();
-		filePaths.add(runSetup.getWhiteQuestionsFilePath());
-		filePaths.add(runSetup.getBlueQuestionsFilePath());
-		filePaths.add(runSetup.getBlackQuestionsFilePath());
-		filePaths.add(runSetup.getRedQuestionsFilePath());
-		filePaths.add(runSetup.getGreenQuestionsFilePath());
+		List<URL> filePaths = runSetup.getFilePaths();
 		return filePaths;
 	}
 	
@@ -55,14 +52,14 @@ public class JDBCSetupDao implements SetupDao {
 	
 
 	@Override
-	public Map<Integer, List> fillQuestionsTablesReturnQuestionQuiz(List<String> filePaths) throws FileNotFoundException {
+	public Map<Integer, List> fillQuestionsTablesReturnQuestionQuiz(List<URL> filePaths) throws IOException {
 		Map<Integer, List> colorQuiz = new HashMap<>();
 
 		for (int i = 0; i < filePaths.size(); i++) {
-			File csvKey = new File((String) filePaths.get(i));
+			URL csvKey = filePaths.get(i);
 			List<String> qualities = new ArrayList<>();
 
-			try (Scanner lineReader = new Scanner(csvKey)) {
+			try (Scanner lineReader = new Scanner(csvKey.openStream())) {
 				while (lineReader.hasNextLine()) {
 					String line = lineReader.nextLine();
 					String lineArray[] = line.split(",");

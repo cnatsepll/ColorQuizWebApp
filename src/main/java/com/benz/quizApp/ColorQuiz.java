@@ -1,13 +1,12 @@
 package com.benz.quizApp;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
-
-import javax.sql.DataSource;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
@@ -38,16 +37,16 @@ public class ColorQuiz {
 		setupDao = new JDBCSetupDao(dataSource);
 	}
 
-	public void run(int userId) throws FileNotFoundException {
+	public void run(int userId) throws IOException {
 		setUserId(userId);
 		setupDatabaseFiles();
 	}
-	public void setupDatabaseFiles() throws FileNotFoundException {
+	public void setupDatabaseFiles() throws IOException {
 		setupDao.resetQuestionTables();
-		List<String> filePaths = setupDao.createFilePathsList();
+		List<URL> filePaths = setupDao.createFilePathsList();
 		setupQuestions(filePaths);
 	}
-	public void setupQuestions(List<String> filePaths) throws FileNotFoundException {
+	public void setupQuestions(List<URL> filePaths) throws IOException {
 		setColorQuiz(setupDao.fillQuestionsTablesReturnQuestionQuiz(filePaths));	
 		}
 	public void generateQuestionList(Map<Integer, List> colorQuiz) {

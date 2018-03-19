@@ -1,6 +1,7 @@
 package com.benz.Controllers;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
@@ -31,7 +32,7 @@ public class QuizController {
 	
 	@RequestMapping(path="/quizPageLanding", method=RequestMethod.POST)
 	public String displayQuizPageLanding(@RequestParam String selfDefinition, 
-			@RequestParam int questionCount, @RequestParam String inputName, HttpSession session) throws FileNotFoundException{
+			@RequestParam int questionCount, @RequestParam String inputName, HttpSession session) throws IOException{
 		int questionCounter = 1;
 		User newUser = new User();
 		newUser.setUserName(inputName);
