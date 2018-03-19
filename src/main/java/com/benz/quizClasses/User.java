@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 public class User {
 	private int userId;
 	private String userName;
+	private String selfDefinition;
 	private LocalDateTime datePosted;
 
 	public int getUserId() {
@@ -29,5 +30,13 @@ public class User {
 
 	public void setDatePosted(LocalDateTime datePosted) {
 		this.datePosted = datePosted;
+	}
+
+	public String getSelfDefinition() {
+		return selfDefinition;
+	}
+
+	public void setSelfDefinition(String selfDefinition) {
+		this.selfDefinition = selfDefinition;
 	}
 }

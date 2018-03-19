@@ -25,9 +25,9 @@ public class JDBCQuizDao implements QuizDao {
 	}
 	@Override
 	public void storeUserAnswer(int userId, String colorTypeKey, String question, int answer) {
-		String sqlInsertPost = "INSERT INTO answer(user_id,color_type_key,question_word,answer_value) "
+		String sqlInsertPost = "INSERT INTO answer(color_type_key,question_word,answer_value,user_id) "
 				+ "VALUES(?,?,?,?)";
-		jdbcTemplate.update(sqlInsertPost, userId,colorTypeKey,question,answer);
+		jdbcTemplate.update(sqlInsertPost, colorTypeKey,question,answer,userId);
 		
 	}
 	@Override

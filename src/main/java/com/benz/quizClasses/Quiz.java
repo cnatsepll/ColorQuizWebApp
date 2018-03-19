@@ -81,7 +81,7 @@ public class Quiz {
 		return resultsArray;
 	}
 
-	public String printScores(Map<String, Integer> colorResult, int questionCounter, boolean timeToGo) {
+	public String printScores(Map<String, Integer> colorResult, int questionCounter) {
 		String mage = "You are a ";
 
 		int resultsArray[] = { whiteCounter, blueCounter, blackCounter, redCounter, greenCounter };
@@ -117,7 +117,7 @@ public class Quiz {
 				|| redCounter == firstPlace && greenCounter == secondPlace && blackCounter == thirdPlace
 				|| greenCounter == firstPlace && blackCounter == secondPlace && redCounter == thirdPlace
 				|| greenCounter == firstPlace && redCounter == secondPlace && blackCounter == thirdPlace)
-				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 < thirdPlace) {
+				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 <= thirdPlace) {
 			mage += " a Mage of Jund";
 		} else if ((whiteCounter == firstPlace && blueCounter == secondPlace && greenCounter == thirdPlace
 				|| whiteCounter == firstPlace && greenCounter == secondPlace && blueCounter == thirdPlace
@@ -125,7 +125,7 @@ public class Quiz {
 				|| blueCounter == firstPlace && greenCounter == secondPlace && whiteCounter == thirdPlace
 				|| greenCounter == firstPlace && whiteCounter == secondPlace && blueCounter == thirdPlace
 				|| greenCounter == firstPlace && blueCounter == secondPlace && whiteCounter == thirdPlace)
-				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 < thirdPlace) {
+				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 <= thirdPlace) {
 			mage += " a Mage of Bant";
 		} else if ((blackCounter == firstPlace && redCounter == secondPlace && blueCounter == thirdPlace
 				|| blackCounter == firstPlace && blueCounter == secondPlace && redCounter == thirdPlace
@@ -133,7 +133,7 @@ public class Quiz {
 				|| redCounter == firstPlace && blueCounter == secondPlace && blackCounter == thirdPlace
 				|| blueCounter == firstPlace && blackCounter == secondPlace && redCounter == thirdPlace
 				|| blueCounter == firstPlace && redCounter == secondPlace && blackCounter == thirdPlace)
-				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 < thirdPlace) {
+				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 <= thirdPlace) {
 			mage += " a Mage of Grixis";
 		} else if ((whiteCounter == firstPlace && redCounter == secondPlace && greenCounter == thirdPlace
 				|| whiteCounter == firstPlace && greenCounter == secondPlace && redCounter == thirdPlace
@@ -141,7 +141,7 @@ public class Quiz {
 				|| redCounter == firstPlace && greenCounter == secondPlace && whiteCounter == thirdPlace
 				|| greenCounter == firstPlace && whiteCounter == secondPlace && redCounter == thirdPlace
 				|| greenCounter == firstPlace && redCounter == secondPlace && whiteCounter == thirdPlace)
-				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 < thirdPlace) {
+				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 <= thirdPlace) {
 			mage += " a Mage of Naya";
 		} else if ((blackCounter == firstPlace && whiteCounter == secondPlace && blueCounter == thirdPlace
 				|| blackCounter == firstPlace && blueCounter == secondPlace && whiteCounter == thirdPlace
@@ -149,7 +149,7 @@ public class Quiz {
 				|| whiteCounter == firstPlace && blueCounter == secondPlace && blackCounter == thirdPlace
 				|| blueCounter == firstPlace && blackCounter == secondPlace && whiteCounter == thirdPlace
 				|| blueCounter == firstPlace && whiteCounter == secondPlace && blackCounter == thirdPlace)
-				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 < thirdPlace) {
+				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 <= thirdPlace) {
 			mage += " a Mage of Esper";
 		} else if ((redCounter == firstPlace && whiteCounter == secondPlace && blueCounter == thirdPlace
 				|| redCounter == firstPlace && blueCounter == secondPlace && whiteCounter == thirdPlace
@@ -157,7 +157,7 @@ public class Quiz {
 				|| whiteCounter == firstPlace && blueCounter == secondPlace && redCounter == thirdPlace
 				|| blueCounter == firstPlace && redCounter == secondPlace && whiteCounter == thirdPlace
 				|| blueCounter == firstPlace && whiteCounter == secondPlace && redCounter == thirdPlace)
-				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 < thirdPlace) {
+				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 <= thirdPlace) {
 			mage += " a Mage of Jeskai";
 		} else if ((redCounter == firstPlace && whiteCounter == secondPlace && blackCounter == thirdPlace
 				|| redCounter == firstPlace && blackCounter == secondPlace && whiteCounter == thirdPlace
@@ -165,7 +165,7 @@ public class Quiz {
 				|| whiteCounter == firstPlace && blackCounter == secondPlace && redCounter == thirdPlace
 				|| blackCounter == firstPlace && redCounter == secondPlace && whiteCounter == thirdPlace
 				|| blackCounter == firstPlace && whiteCounter == secondPlace && redCounter == thirdPlace)
-				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 < thirdPlace) {
+				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 <= thirdPlace) {
 			mage += " a Mage of Mardu";
 		} else if ((blackCounter == firstPlace && blueCounter == secondPlace && greenCounter == thirdPlace
 				|| blackCounter == firstPlace && greenCounter == secondPlace && blueCounter == thirdPlace
@@ -173,7 +173,7 @@ public class Quiz {
 				|| blueCounter == firstPlace && greenCounter == secondPlace && blackCounter == thirdPlace
 				|| greenCounter == firstPlace && blackCounter == secondPlace && blueCounter == thirdPlace
 				|| greenCounter == firstPlace && blueCounter == secondPlace && blackCounter == thirdPlace)
-				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 < thirdPlace) {
+				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 <= thirdPlace) {
 			mage += " a Mage of Bant";
 		} else if ((blueCounter == firstPlace && redCounter == secondPlace && greenCounter == thirdPlace
 				|| blueCounter == firstPlace && greenCounter == secondPlace && redCounter == thirdPlace
@@ -181,7 +181,7 @@ public class Quiz {
 				|| redCounter == firstPlace && greenCounter == secondPlace && blueCounter == thirdPlace
 				|| greenCounter == firstPlace && blueCounter == secondPlace && redCounter == thirdPlace
 				|| greenCounter == firstPlace && redCounter == secondPlace && blueCounter == thirdPlace)
-				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 < thirdPlace) {
+				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 <= thirdPlace) {
 			mage += " a Mage of Temur";
 		} else if ((blackCounter == firstPlace && whiteCounter == secondPlace && greenCounter == thirdPlace
 				|| blackCounter == firstPlace && greenCounter == secondPlace && whiteCounter == thirdPlace
@@ -189,7 +189,7 @@ public class Quiz {
 				|| whiteCounter == firstPlace && greenCounter == secondPlace && blackCounter == thirdPlace
 				|| greenCounter == firstPlace && blackCounter == secondPlace && whiteCounter == thirdPlace
 				|| greenCounter == firstPlace && whiteCounter == secondPlace && blackCounter == thirdPlace)
-				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 < thirdPlace) {
+				&& thirdPlace / 2 > fourthPlace || (secondPlace + (questionCounter / 2)) / 2 <= thirdPlace) {
 			mage += " a Mage of Azban";
 
 			// guilds
@@ -239,12 +239,8 @@ public class Quiz {
 			mage += "Green/Red Mage (Welcome to the Gruul Clans)";
 		}
 
-		int trueCount = questionCounter;
-		if (timeToGo) {
-			trueCount -= 1;
-		}
 		String results = " <<Your scores are>> | White: " + whiteCounter + " | Blue: " + blueCounter + " | Black: "
-				+ blackCounter + " | Red: " + redCounter + " | Green: " + greenCounter + " | <You answered " + trueCount
+				+ blackCounter + " | Red: " + redCounter + " | Green: " + greenCounter + " | <You answered " + questionCounter
 				+ " questions>";
 
 		return mage + results;

@@ -11,15 +11,24 @@ DROP TABLE IF EXISTS red_questions;
 DROP TABLE IF EXISTS green_questions;
 
 
-
 CREATE SEQUENCE seq_user_id;
 CREATE TABLE users
 (
 	user_id INTEGER PRIMARY KEY DEFAULT NEXTVAL('seq_user_id'),
 	username VARCHAR(200) NOT NULL,
-	post_date TIMESTAMP DEFAULT NOW()
+	post_date TIMESTAMP DEFAULT NOW(),
+    self_definition VARCHAR(280)
 );
 
+CREATE SEQUENCE seq_answer_id;
+CREATE TABLE answer
+(
+    answer_id INTEGER PRIMARY KEY DEFAULT NEXTVAL('seq_answer_id'), 
+    color_type_key VARCHAR(200) NOT NULL,
+    question_word VARCHAR(200) NOT NULL,
+    answer_value INTEGER NOT NULL,
+	user_id INTEGER NOT NULL REFERENCES users
+);
 
 CREATE TABLE white_questions
 (
@@ -42,15 +51,7 @@ CREATE TABLE green_questions
     question_word VARCHAR(200) NOT NULL
 );
 
-CREATE SEQUENCE seq_answer_id;
-CREATE TABLE answer
-(
-	answer_id INTEGER PRIMARY KEY DEFAULT NEXTVAL('seq_answer_id'),
-	user_id INTEGER NOT NULL REFERENCES users,
-    color_type_key VARCHAR(200) NOT NULL,
-    question_word VARCHAR(200) NOT NULL,
-    answer_value INTEGER NOT NULL
-);
+
 
 CREATE SEQUENCE seq_result_id;
 CREATE TABLE result
@@ -64,4 +65,5 @@ CREATE TABLE result
     green_counter INTEGER
 );
 
+INSERT INTO users(username) VALUES ('test');
 

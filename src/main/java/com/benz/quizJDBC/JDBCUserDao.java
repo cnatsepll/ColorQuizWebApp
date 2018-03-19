@@ -22,16 +22,35 @@ public class JDBCUserDao implements UserDao{
 	}
 
 	public User initiateUser(User newUser) {
-		String sqlInsertPost = "INSERT INTO users(username, post_date) VALUES (?,?)";
-		newUser.setDatePosted(LocalDateTime.now());
-		jdbcTemplate.update(sqlInsertPost, newUser.getUserName(), newUser.getDatePosted());
+		String sqlInsertPost = "INSERT INTO users(username, self_definition) VALUES (?,?)"
+				+ " RETURNING user_id";
+		int userId = jdbcTemplate.queryForObject(sqlInsertPost, int.class, newUser.getUserName(), newUser.getSelfDefinition());
+		newUser.setUserId(userId);
 		return newUser;
 	}
 
-	public int getUserId(User newUser) {
+	public int getUserIdFromDatabase() {
+		String sqlQueryPost = "SELECT user_id from users ORDER BY user_id DESC LIMIT 1";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlQueryPost);
+		int maxId = results.getInt("user_id");
+		return (maxId+1);
+	}
+	
+	public String returnUsernameFromDatabase(User newUser) {
 		String sqlQueryPost = "SELECT * FROM users WHERE post_date = ? AND username = ?";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlQueryPost, newUser.getDatePosted(), newUser.getUserName());
-		int userId = results.getInt(1);
-		return userId;
+		return results.getString("username");
 	}
+	
+//	private User mapRowToUser(SqlRowSet results) {
+//		User newUser;
+//		newUser = new User();
+//		newUser.setDatePosted((LocalDateTime)(results.getLocalDateTime("post_date"));
+//		newUser.setSelfDefinition(selfDefinition);
+//		newUser.setUserId(userId);
+//		newUser.setUserName(userName);
+//
+//		return newUser;
+//	}
+//	
 }

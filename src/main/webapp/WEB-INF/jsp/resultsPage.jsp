@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Here are your results!</title>
+		<title>Your Results</title>
 	</head>
 	<body>
-		<h1></h1>
+		<h1>Here are your results!</h1>
+		<c:out value="${results}"/>
 	</body>
 </html>
