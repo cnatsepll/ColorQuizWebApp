@@ -33,12 +33,12 @@ public class ColorQuiz {
 	private int answerValue;
 	private Map<String, Integer> colorResult = new HashMap<>();
 	private Map<Integer, List> colorQuiz = new HashMap();
+	
+	public ColorQuiz(BasicDataSource dataSource) {
+		setupDao = new JDBCSetupDao(dataSource);
+	}
 
 	public void run(int userId) throws FileNotFoundException {
-		BasicDataSource dataSource = new BasicDataSource();
-		dataSource.setUrl("jdbc:postgresql://localhost:5432/color_quiz_database");
-		dataSource.setUsername("postgres");
-		setupDao = new JDBCSetupDao(dataSource);
 		setUserId(userId);
 		setupDatabaseFiles();
 	}
@@ -193,8 +193,6 @@ public class ColorQuiz {
 	}
 	public void setUserId(int userId) {
 		userId = this.userId;
-	}
-	public ColorQuiz() {
 	}
 	public int getQuestionCount() {
 		return questionCount;

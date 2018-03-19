@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS users;
-DROP SEQUENCE IF EXISTS seq_user_id;
 DROP TABLE IF EXISTS answer;
 DROP SEQUENCE IF EXISTS seq_answer_id;
 DROP TABLE IF EXISTS result;
 DROP SEQUENCE IF EXISTS seq_result_id;
+DROP TABLE IF EXISTS users;
+DROP SEQUENCE IF EXISTS seq_user_id;
 DROP TABLE IF EXISTS white_questions;
 DROP TABLE IF EXISTS blue_questions;
 DROP TABLE IF EXISTS black_questions;

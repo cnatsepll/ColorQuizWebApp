@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,8 @@ public class QuizController {
 	UserDao userDao;
 	@Autowired
 	QuizDao quizDao;
+	@Autowired
+	BasicDataSource dataSource;
 	
 	@RequestMapping(path="/quizPageLanding", method=RequestMethod.POST)
 	public String displayQuizPageLanding(@RequestParam String selfDefinition, 
@@ -35,7 +38,7 @@ public class QuizController {
 		newUser.setSelfDefinition(selfDefinition);
 		userDao.initiateUser(newUser);
 		int userId = newUser.getUserId();
-		ColorQuiz colorQuiz = new ColorQuiz();
+		ColorQuiz colorQuiz = new ColorQuiz(dataSource);
 		colorQuiz.run(userId);
 		session.setAttribute("userId", userId);
 		session.setAttribute("questionCounter", questionCounter);
