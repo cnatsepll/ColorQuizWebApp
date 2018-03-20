@@ -27,50 +27,8 @@ public class Setup {
 			URL greenURL = new URL(greenQuestionsFilePath);
 			filePaths.add(greenURL);
 			} catch (MalformedURLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-	
-	
 	return filePaths;
 	}
-	
-//	private	List<String> filePaths = new ArrayList<>(); // Keyed csv's live here
-
-
-//	public String getWhiteQuestionsFilePath() {
-//		return whiteQuestionsFilePath;
-//	}
-//	public void setWhiteQuestionsFilePath(String whiteQuestionsFilePath) {
-//		this.whiteQuestionsFilePath = whiteQuestionsFilePath;
-//	}
-//	public String getBlueQuestionsFilePath() {
-//		return blueQuestionsFilePath;
-//	}
-//	public void setBlueQuestionsFilePath(String blueQuestionsFilePath) {
-//		this.blueQuestionsFilePath = blueQuestionsFilePath;
-//	}
-//	public String getBlackQuestionsFilePath() {
-//		return blackQuestionsFilePath;
-//	}
-//	public void setBlackQuestionsFilePath(String blackQuestionsFilePath) {
-//		this.blackQuestionsFilePath = blackQuestionsFilePath;
-//	}
-//	public String getRedQuestionsFilePath() {
-//		return redQuestionsFilePath;
-//	}
-//	public void setRedQuestionsFilePath(String redQuestionsFilePath) {
-//		this.redQuestionsFilePath = redQuestionsFilePath;
-//	}
-//	public String getGreenQuestionsFilePath() {
-//		return greenQuestionsFilePath;
-//	}
-//	public void setGreenQuestionsFilePath(String greenQuestionsFilePath) {
-//		this.greenQuestionsFilePath = greenQuestionsFilePath;
-//	}
-//
-//	public void setFilePaths(List<String> filePaths) {
-//		this.filePaths = filePaths;
-//	}
-
 }

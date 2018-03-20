@@ -89,20 +89,17 @@ public class ColorQuiz {
 		quiz.fillCounters(colorResult);
 	}
 	
-	public String generateMageResult(Map<String, Integer>colorResult, int questionCounter){
-		return quiz.printScores(colorResult, questionCounter);
+	public List<String> generateMageResult(Map<String, Integer>colorResult, int questionCounter){
+		return quiz.printMageResult();
+	}
+	public String returnScores(int questionCounter) {
+		return quiz.returnScores(questionCounter);
 	}
 	public Randomizer getRandom() {
 		return random;
 	}
 	public void setRandom(Randomizer random) {
 		this.random = random;
-	}
-	public boolean isTimeToGo() {
-		return timeToGo;
-	}
-	public void setTimeToGo(boolean timeToGo) {
-		this.timeToGo = timeToGo;
 	}
 	public int getQuestionCounter() {
 		return questionCounter;

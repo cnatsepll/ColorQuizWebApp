@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<link rel="shortcut icon" type="image/png" href="https://lh3.ggpht.com/uBFmbIA5X7gkUCZLmpyxSKtkJ-zeOBq448O8VCs6pK0LVX1xrzZe_LtqjRDgLNcxrA=w300"/>
+<meta charset="UTF-8">
+<c:url value="/css/style.css" var="cssHref" />
+<link rel="stylesheet" href="${cssHref}">
 		<title>Color Quiz</title>
 	</head>
 	<body>

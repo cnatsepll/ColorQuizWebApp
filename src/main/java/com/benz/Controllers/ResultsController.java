@@ -1,5 +1,6 @@
 package com.benz.Controllers;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
@@ -24,7 +25,9 @@ public class ResultsController {
 		ColorQuiz colorQuiz = (ColorQuiz) session.getAttribute("colorQuiz");
 		Map<String, Integer> colorResult = (Map<String, Integer>) session.getAttribute("colorResult");
 		colorQuiz.fillColorCounters();
-		String results = colorQuiz.generateMageResult(colorResult, questionCounter);
+		List<String> results = colorQuiz.generateMageResult(colorResult, questionCounter);
+		String scores = colorQuiz.returnScores(questionCounter);
+		session.setAttribute("scores", scores);
 		session.setAttribute("results", results);
 		return "redirect:/resultsPage";
 	}

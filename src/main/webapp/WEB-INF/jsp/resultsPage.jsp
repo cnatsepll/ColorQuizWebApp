@@ -2,16 +2,37 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Your Results</title>
-	</head>
-	<body>
-		<h1>Here are your results!</h1>
-		<div class = "topMargin">
-		<c:out value="${results}"/>
-		</div>
-		<div class = "topMargin">
+<head>
+<link rel="shortcut icon" type="image/png"
+	href="https://lh3.ggpht.com/uBFmbIA5X7gkUCZLmpyxSKtkJ-zeOBq448O8VCs6pK0LVX1xrzZe_LtqjRDgLNcxrA=w300" />
+<meta charset="UTF-8">
+<c:url value="/css/style.css" var="cssHref" />
+<link rel="stylesheet" href="${cssHref}">
+<title>Your Results</title>
+</head>
+<body>
+	<h1>Here are your results!</h1>
+
+	<c:forEach var="string" items="${results}" varStatus="loop">
+		<c:choose>
+			<c:when test="${loop.index == results.size()-1}">
+				<div>
+					<a href="${string}">Visit Wizards for more info</a>
+				</div>
+			</c:when>
+			<c:otherwise>
+				<div class="topMargin">
+					<c:out value="${string}" />
+				</div>
+			</c:otherwise>
+		</c:choose>
+	</c:forEach>
+
+	<div class="topMargin">
+		<c:out value="${scores}" />
+	</div>
+	<div class="topMargin">
 		<a href="/">Return to the homepage</a>
-		</div>
-	</body>
+	</div>
+</body>
 </html>

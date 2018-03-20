@@ -41,16 +41,5 @@ public class JDBCUserDao implements UserDao{
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlQueryPost, newUser.getDatePosted(), newUser.getUserName());
 		return results.getString("username");
 	}
-	
-//	private User mapRowToUser(SqlRowSet results) {
-//		User newUser;
-//		newUser = new User();
-//		newUser.setDatePosted((LocalDateTime)(results.getLocalDateTime("post_date"));
-//		newUser.setSelfDefinition(selfDefinition);
-//		newUser.setUserId(userId);
-//		newUser.setUserName(userName);
-//
-//		return newUser;
-//	}
-//	
+		
 }

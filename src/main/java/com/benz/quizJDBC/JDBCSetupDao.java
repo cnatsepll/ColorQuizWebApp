@@ -62,7 +62,6 @@ public class JDBCSetupDao implements SetupDao {
 			try (Scanner lineReader = new Scanner(csvKey.openStream())) {
 				while (lineReader.hasNextLine()) {
 					String line = lineReader.nextLine();
-					System.out.println(line);
 					String lineArray[] = line.split(",");
 					String readLine = lineArray[0];
 					if (i == 0) {

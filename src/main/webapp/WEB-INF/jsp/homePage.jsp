@@ -3,18 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" type="image/png" href="https://lh3.ggpht.com/uBFmbIA5X7gkUCZLmpyxSKtkJ-zeOBq448O8VCs6pK0LVX1xrzZe_LtqjRDgLNcxrA=w300"/>
+<link rel="shortcut icon" type="image/png"
+	href="https://lh3.ggpht.com/uBFmbIA5X7gkUCZLmpyxSKtkJ-zeOBq448O8VCs6pK0LVX1xrzZe_LtqjRDgLNcxrA=w300" />
 <meta charset="UTF-8">
-<title>Welcome To The Color Quiz!</title>
 <c:url value="/css/style.css" var="cssHref" />
 <link rel="stylesheet" href="${cssHref}">
+<title>Welcome To The Color Quiz!</title>
 </head>
 <body>
 	<h1>Welcome To The Color Quiz!</h1>
 
 	<c:url var="formAction" value="/quizPageLanding" />
 	<form method="POST" action="${formAction}">
-		<div class="formInputGroup">
 			<div>
 				<label for="inputName topMargin">Please enter your name:</label> <span><input
 					required="required" type="text" name="inputName" id="value" /></span>
@@ -29,18 +29,18 @@
 					<option value="75">75</option>
 					<option value="100">100</option>
 				</select>
-				<div class="topMargin">
-					<c:out
-						value="The more questions answered, the more accurate your result will be." />
 			</div>
+			<div class="topMargin">
+				<c:out
+					value="The more questions answered, the more accurate your result will be." />
 			</div>
-				<div class="formInputGroup topMargin">
-					<label for="inputName">(Optional)Please enter a word or
-						sentence that best describes yourself:</label> <input type="text"
-						name="selfDefinition" id="value" />
-				</div>
+		<div class="topMargin">
+			<label for="inputName">(Optional)Please enter a word or
+				sentence that best describes yourself:</label> <input type="text"
+				name="selfDefinition" id="value" />
 		</div>
-		<input class="formSubmitButton topMargin" type="submit" value="Next Page" />
+		<input class="formSubmitButton topMargin" type="submit"
+			value="Next Page" />
 	</form>
 </body>
 </html>

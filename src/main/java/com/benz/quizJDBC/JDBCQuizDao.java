@@ -55,7 +55,5 @@ public class JDBCQuizDao implements QuizDao {
 			greenCounter = colorResult.get("g");
 		}
 		jdbcTemplate.update(sqlInsertPost, userId,whiteCounter,blueCounter,blackCounter,redCounter,greenCounter);
-	}
-
-	
+	}	
 }
