@@ -94,8 +94,7 @@ public class Quiz {
 		int fifthPlace = resultsArray[0];
 
 		// multicolor
-		if (firstPlace == secondPlace && firstPlace == thirdPlace && firstPlace == fourthPlace
-				&& firstPlace == fifthPlace) {
+		if (firstPlace == secondPlace && firstPlace == thirdPlace && firstPlace == fourthPlace) {
 			mage += "a Multicolored Wonder. The Planes are at your fingertips";
 
 			// monocolor
