@@ -32,13 +32,13 @@
 				<div class="topMargin">
 					<c:out
 						value="The more questions answered, the more accurate your result will be." />
-				</div>
+			</div>
+			</div>
 				<div class="formInputGroup topMargin">
 					<label for="inputName">(Optional)Please enter a word or
 						sentence that best describes yourself:</label> <input type="text"
 						name="selfDefinition" id="value" />
 				</div>
-			</div>
 		</div>
 		<input class="formSubmitButton topMargin" type="submit" value="Next Page" />
 	</form>

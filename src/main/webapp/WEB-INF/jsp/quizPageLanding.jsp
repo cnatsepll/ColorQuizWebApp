@@ -8,19 +8,19 @@
 <body>
 	<h1>Your questions are one click away</h1>
 	<div>
-	<c:out value="The following questions will present you with 
+	<c:out class="topMargin" value="The following questions will present you with 
 	a word, and will ask you how strongly, or closely you associate with it"/>
 	</div>
 	<div>
-	<c:out value="Meaning: \"How well does the shown word fit into your personality or habbits?\" "/>
+	<c:out class="topMargin" value="Meaning: \"How well does the shown word fit into your personality or habbits?\" "/>
 	</div>
 	<div>
-	<c:out value="Use your gut and try to answer each question as quickly as possible."/>
+	<c:out class="topMargin" value="Use your gut and try to answer each question as quickly as possible."/>
 	</div>
 	<div>
 	<c:url var="formAction" value="/quizPage"/>
 	<form method="GET" action="${formAction}">
-		<input class="formSubmitButton" type="submit" value="Begin Quiz!" />
+		<input class="topMargin" class="formSubmitButton" type="submit" value="Begin Quiz!" />
 	</form>
 	</div>
 </body>
