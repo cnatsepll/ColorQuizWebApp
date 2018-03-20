@@ -16,7 +16,7 @@
 	<form method="POST" action="${formAction}">
 		<div class="formInputGroup">
 			<div>
-				<label for="inputName">Please enter your name:</label> <span><input
+				<label for="inputName topMargin">Please enter your name:</label> <span><input
 					required="required" type="text" name="inputName" id="value" /></span>
 			</div>
 			<div class="howManyQuestions topMargin" style="font-size: 14px;">
@@ -29,7 +29,7 @@
 					<option value="75">75</option>
 					<option value="100">100</option>
 				</select>
-				<div class=topMargin>
+				<div class="topMargin">
 					<c:out
 						value="The more questions answered, the more accurate your result will be." />
 				</div>
