@@ -30,7 +30,7 @@
 	</c:forEach>
 
 	<div class="topMargin">
-		<c:out value="Your score are..."/>
+		<c:out value="Your scores are..."/>
 	</div>
 	<div class="">
 		<c:out value="${scores}" />

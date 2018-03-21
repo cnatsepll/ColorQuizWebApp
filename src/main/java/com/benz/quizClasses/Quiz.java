@@ -99,7 +99,7 @@ public class Quiz {
 			
 			// monocolor
 		} else if (whiteCounter == firstPlace && (firstPlace *.7) >= secondPlace) {
-			mage.add("You are a Mono White Mage, peace be with you.");
+			mage.add("You are a Mono White Mage, all for one one for all.");
 			mage.add("White wants peace.");
 			mage.add("White wants to create a world where there is no unnecessary suffering, a world where life is as good as it can be for each individual. The key to making this happen is teaching individuals the importance of taking actions which benefit the group as a whole, even if those actions might not benefit them personally.");
 			mage.add("White does want as many as possible to understand its motives and share them. But white realizes that in order to accomplish its larger goal, some individuals will have to be lead down the path rather than venture there of their own accord.");

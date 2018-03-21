@@ -30,7 +30,7 @@ public class ResultsController {
 		String scores = colorQuiz.returnScores(questionCounter);
 		session.setAttribute("scores", scores);
 		session.setAttribute("results", results);
-		quizDao.storeUserFinalResults(userId, colorResult, colorQuiz);
+		quizDao.storeUserFinalResults(userId, colorResult, colorQuiz, questionCounter);
 		return "redirect:/resultsPage";
 	}
 	@RequestMapping(path="/resultsPage", method=RequestMethod.GET)

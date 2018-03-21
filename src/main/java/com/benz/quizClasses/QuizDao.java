@@ -10,5 +10,5 @@ public interface QuizDao {
 
 	public void storeUserAnswer(int userId, String colorTypeKey, String question, int answer);
 	
-	public void storeUserFinalResults(int userId, Map<String, Integer> colorResult, ColorQuiz colorQuiz);
+	public void storeUserFinalResults(int userId, Map<String, Integer> colorResult, ColorQuiz colorQuiz, int questionCount);
 }

@@ -28,7 +28,7 @@ public class JDBCQuizDao implements QuizDao {
 		
 	}
 	@Override
-	public void storeUserFinalResults(int userId, Map<String, Integer> colorResult, ColorQuiz colorQuiz) {
+	public void storeUserFinalResults(int userId, Map<String, Integer> colorResult, ColorQuiz colorQuiz, int questionCount) {
 		 int whiteCounter = 0;
 		 int blueCounter = 0;
 		 int blackCounter = 0;
@@ -51,8 +51,7 @@ public class JDBCQuizDao implements QuizDao {
 		if (colorResult.get("g") != null) {
 			greenCounter = colorResult.get("g");
 		}
-		int questionCounter = colorQuiz.getQuestionCount();
-		String resultColor = colorQuiz.generateMageResult(colorResult, questionCounter).get(0);
-		jdbcTemplate.update(sqlInsertPost, userId,resultColor,questionCounter,whiteCounter,blueCounter,blackCounter,redCounter,greenCounter);
+		String resultColor = colorQuiz.generateMageResult(colorResult, questionCount).get(0);
+		jdbcTemplate.update(sqlInsertPost, userId,resultColor,questionCount,whiteCounter,blueCounter,blackCounter,redCounter,greenCounter);
 	}	
 }
