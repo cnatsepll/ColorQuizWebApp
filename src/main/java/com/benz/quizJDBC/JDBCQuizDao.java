@@ -35,7 +35,7 @@ public class JDBCQuizDao implements QuizDao {
 		 int redCounter = 0;
 		 int greenCounter = 0;
 		String sqlInsertPost = "INSERT INTO result(user_id, result_color, question_count, white_counter, blue_counter, black_counter, red_counter, green_counter)"
-				+ " VALUES (?,?,?,?,?,?,?)";
+				+ " VALUES (?,?,?,?,?,?,?,?)";
 		if (colorResult.get("w") != null) {
 			whiteCounter = colorResult.get("w");
 		}
