@@ -19,7 +19,7 @@
 				<label for="inputName topMargin">Please enter your name:</label> <span><input
 					required="required" type="text" name="inputName" id="value" /></span>
 			</div>
-			<div class="howManyQuestions topMargin" style="font-size: 14px;">
+			<div class="howManyQuestions topMargin">
 				<c:out value="How many questions would you like to answer?:" />
 
 				<select name="questionCount" class="tab topMargin">

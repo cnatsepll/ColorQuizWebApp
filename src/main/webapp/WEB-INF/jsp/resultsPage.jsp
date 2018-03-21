@@ -17,7 +17,8 @@
 		<c:choose>
 			<c:when test="${loop.index == results.size()-1}">
 				<div>
-					<a href="${string}">Visit Wizards for more info</a>
+					<c:out value="For a more in-depth explanation of your result"/>
+					<a href="${string}">Click Here</a>
 				</div>
 			</c:when>
 			<c:otherwise>
@@ -29,6 +30,9 @@
 	</c:forEach>
 
 	<div class="topMargin">
+		<c:out value="Your score are..."/>
+	</div>
+	<div class="">
 		<c:out value="${scores}" />
 	</div>
 	<div class="topMargin">

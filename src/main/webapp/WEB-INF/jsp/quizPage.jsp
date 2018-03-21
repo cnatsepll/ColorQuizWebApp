@@ -37,13 +37,13 @@
 						<input type="radio" name="answerValue" value= 3 onclick="this.form.submit();">A little bit
 						</label>
 						<label>
-						<input type="radio" name="answerValue" value= 6 onclick="this.form.submit();">Some
+						<input type="radio" name="answerValue" value= 5 onclick="this.form.submit();">Some
 						</label>
 						<label>
 						<input type="radio" name="answerValue" value= 10 onclick="this.form.submit();">Very Strongly
 						</label>
 						<label>
-						<input type="radio" name="answerValue" value= 15 onclick="this.form.submit();">That's me
+						<input type="radio" name="answerValue" value= 20 onclick="this.form.submit();">That's me
 						</label>
 						</div>
 					</div>
@@ -69,13 +69,13 @@
 						<input type="radio" name="answerValue" value= 3 onclick="this.form.submit();">A little bit
 						</label>
 						<label>
-						<input type="radio" name="answerValue" value= 6 onclick="this.form.submit();">Some
+						<input type="radio" name="answerValue" value= 5 onclick="this.form.submit();">Some
 						</label>
 						<label>
 						<input type="radio" name="answerValue" value= 10 onclick="this.form.submit();">Very Strongly
 						</label>
 						<label>
-						<input type="radio" name="answerValue" value= 15 onclick="this.form.submit();">That's me
+						<input type="radio" name="answerValue" value= 20 onclick="this.form.submit();">That's me
 						</label>
 						</div>
 					</div>
