@@ -17,7 +17,7 @@
 	<form method="POST" action="${formAction}">
 			<div>
 				<label for="inputName topMargin">Please enter your name:</label> <span><input
-					required="required" type="text" name="inputName" id="value" /></span>
+					required="required" type="text" maxlength="200" name="inputName" id="value" /></span>
 			</div>
 			<div class="howManyQuestions topMargin">
 				<c:out value="How many questions would you like to answer?:" />
@@ -40,7 +40,7 @@
 			</div>
 		<div class="topMargin">
 			<label for="inputName">(Optional)Please enter a word or
-				sentence that best describes yourself:</label> <input type="text"
+				sentence that best describes yourself:</label> <input type="text" maxlength="280"
 				name="selfDefinition" id="value" />
 		</div>
 		<input class="formSubmitButton topMargin" type="submit"
