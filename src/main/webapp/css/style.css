@@ -1,10 +1,4 @@
-.topMargin {
-	margin-top: 10px;
-}
 
-html {
-	text-align: center;
-}
 
 @media only screen and (min-device-width: 400px) and (max-device-width:
 	850px) and (-webkit-min-device-pixel-ratio: 3) {
@@ -15,11 +9,26 @@ html {
 		font-size: 8rem;
 	}
 }
-
+.topMargin {
+	margin-top: 10px;
+}
+.topPadding{
+	padding-top: 10px;
+}
+.padding{
+	padding: 10px;
+}
+html {
+	text-align: center;
+}
 body {
 	font-size: 1.2rem;
+	
 }
-
+.footer{
+	padding-top: 15em;
+	font-size: .9em;
+}
 .h1 {
 	font-size: 2.5rem;
 }

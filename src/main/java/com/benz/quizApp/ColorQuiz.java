@@ -49,8 +49,30 @@ public class ColorQuiz {
 	public void setupQuestions(List<URL> filePaths) throws IOException {
 		setColorQuiz(setupDao.fillQuestionsTablesReturnQuestionQuiz(filePaths));	
 		}
+	private int randomKey;
+	public int getRandomKey() {
+		return randomKey;
+	}
+	public void setRandomKey(int key) {
+		randomKey = key;
+	}
+	private List<String> questionLineArray;
+	public List<String> getQuestionLine(){
+		return questionLineArray;
+	}
+	public void setQuestionLine(List<String> lineArray) {
+		questionLineArray = lineArray;
+	}
+	public int index;
+	public int getIndex() {
+		return index;
+	}
+	public void setIndex(int i) {
+		index = i;
+	}
 	public void generateQuestionList(Map<Integer, List> colorQuiz) {
 		int key = random.keyRandomizer(colorQuiz);
+		setRandomKey(key);
 		List<String> questionList = new ArrayList<>();
 		if (key == 5) {
 			String noValidQuestions = "true";
@@ -58,7 +80,9 @@ public class ColorQuiz {
 			setQuestion(questionList);
 		}else {
 		int i = random.newLine(colorQuiz, key);
+		setIndex(i);
 		List<String> lineArray = quiz.getColorQualities(colorQuiz, key, i);
+		setQuestionLine(lineArray);
 		String quality = lineArray.get(i);
 		String colorTypeKey = lineArray.get(i).substring(0, 1);
 		String question = quiz.getQuestion(colorQuiz, lineArray, i, key);
@@ -74,6 +98,9 @@ public class ColorQuiz {
 	}
 	public void newQuestion() {
 		generateQuestionList(getColorQuiz());
+	}
+	public void removeQuestion() {
+		quiz.removeQuestion(colorQuiz, getQuestionLine(), getIndex(), getRandomKey());
 	}
 	
 	public String returnQuestion() {

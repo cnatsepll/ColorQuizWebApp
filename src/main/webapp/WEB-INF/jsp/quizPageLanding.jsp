@@ -16,7 +16,7 @@
 	a word, and will ask you how strongly, or closely you associate with it"/>
 	</div>
 	<div class="topMargin">
-	<c:out  value="Meaning: \"How well does the shown word fit into your personality or habbits?\" "/>
+	<c:out  value="Meaning: \"How well does the shown word fit into your personality or habits?\" "/>
 	</div>
 	<div class="topMargin" >
 	<c:out value="Use your gut and try to answer each question as quickly as possible."/>

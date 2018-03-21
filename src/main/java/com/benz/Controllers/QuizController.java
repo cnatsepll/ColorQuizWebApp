@@ -62,10 +62,13 @@ public class QuizController {
 		session.setAttribute("colorResult", colorQuiz.getColorResult());
 		session.setAttribute("questionCounter", questionCounter);
 		quizDao.storeUserAnswer((int)session.getAttribute("userId"), colorKey, question, answerValue);
+		colorQuiz.removeQuestion();
 		return "redirect:/quizPage";
 	}
 	@RequestMapping(path="/quizPage", method=RequestMethod.GET)
-	public String displayQuizPageGET(){	
+	public String displayQuizPageGET(HttpSession session){	
+		ColorQuiz colorQuiz = (ColorQuiz) session.getAttribute("colorQuiz");
+		colorQuiz.newQuestion();
 		return "quizPage";
 	}
 }

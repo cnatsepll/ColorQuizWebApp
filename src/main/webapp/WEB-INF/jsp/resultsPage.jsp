@@ -16,7 +16,7 @@
 	<c:forEach var="string" items="${results}" varStatus="loop">
 		<c:choose>
 			<c:when test="${loop.index == results.size()-1}">
-				<div>
+				<div class="topMargin">
 					<c:out value="For a more in-depth explanation of your result"/>
 					<a href="${string}">Click Here</a>
 				</div>

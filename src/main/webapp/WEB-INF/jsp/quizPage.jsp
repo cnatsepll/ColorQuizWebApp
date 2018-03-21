@@ -12,8 +12,8 @@
 	<body>
 		<h1>Walk the Planes</h1>
 			
-			${colorQuiz.newQuestion()}
-					<!--  ask question if questions remain -->
+<%-- 			${colorQuiz.newQuestion()}
+ --%>					<!--  ask question if questions remain -->
 			<c:choose> 
 			<c:when test="${questionCounter < questionCount}"> 
 					<!--  generate question word -->
