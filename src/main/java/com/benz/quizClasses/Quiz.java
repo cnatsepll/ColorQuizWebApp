@@ -12,9 +12,6 @@ public class Quiz {
 	private Integer blackCounter = 0;
 	private Integer redCounter = 0;
 	private Integer greenCounter = 0;
-	
-	private String white = "";
-
 
 
 	public List<String> getColorQualities(Map<Integer, List> colorQuiz, int key, int i) {
@@ -94,8 +91,6 @@ public class Quiz {
 			mage.add("You are a Multicolored Wonder. The Planes are at your fingertips");
 			mage.add("There is no holding you back. You are intertwined with all of the facets of life and, when given the chance, use them to your full advantage.");
 			mage.add("https://www.lesserwrong.com/posts/KbaJsfBtdpGv7EKbC/the-mtg-color-wheel");
-			
-			
 			
 			// monocolor
 		} else if (whiteCounter == firstPlace && (firstPlace *.7) >= secondPlace) {
