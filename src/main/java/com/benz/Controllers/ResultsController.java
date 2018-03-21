@@ -21,6 +21,7 @@ public class ResultsController {
 	
 	@RequestMapping(path="/resultsPage", method=RequestMethod.POST)
 	public String displayResultsPage(HttpSession session) {
+		int userId = (int) session.getAttribute("userId");
 		int questionCounter = (int) session.getAttribute("questionCounter");
 		ColorQuiz colorQuiz = (ColorQuiz) session.getAttribute("colorQuiz");
 		Map<String, Integer> colorResult = (Map<String, Integer>) session.getAttribute("colorResult");
@@ -29,6 +30,7 @@ public class ResultsController {
 		String scores = colorQuiz.returnScores(questionCounter);
 		session.setAttribute("scores", scores);
 		session.setAttribute("results", results);
+		quizDao.storeUserFinalResults(userId, colorResult, colorQuiz);
 		return "redirect:/resultsPage";
 	}
 	@RequestMapping(path="/resultsPage", method=RequestMethod.GET)

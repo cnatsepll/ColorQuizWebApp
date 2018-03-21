@@ -58,6 +58,8 @@ CREATE TABLE result
 (
 	result_id INTEGER PRIMARY KEY DEFAULT NEXTVAL('seq_result_id'),
 	user_id INTEGER NOT NULL REFERENCES users,
+    result_color VARCHAR(400),
+    question_count INTEGER,
     white_counter INTEGER,
     blue_counter INTEGER,
     black_counter INTEGER,

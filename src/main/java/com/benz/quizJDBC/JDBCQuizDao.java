@@ -1,9 +1,6 @@
 package com.benz.quizJDBC;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 
 import javax.sql.DataSource;
 
@@ -11,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import com.benz.quizApp.ColorQuiz;
 import com.benz.quizClasses.Quiz;
 import com.benz.quizClasses.QuizDao;
-import com.benz.quizClasses.Randomizer;
 @Component
 public class JDBCQuizDao implements QuizDao {
 
@@ -31,14 +28,14 @@ public class JDBCQuizDao implements QuizDao {
 		
 	}
 	@Override
-	public void storeUserFinalResults(int userId, Map<String, Integer> colorResult) {
+	public void storeUserFinalResults(int userId, Map<String, Integer> colorResult, ColorQuiz colorQuiz) {
 		 int whiteCounter = 0;
 		 int blueCounter = 0;
 		 int blackCounter = 0;
 		 int redCounter = 0;
 		 int greenCounter = 0;
-		String sqlInsertPost = "INSERT INTO result(user_id, white_counter, blue_counter, black_counter, red_counter, green_counter)"
-				+ " VALUES (?,?,?,?,?,?)";
+		String sqlInsertPost = "INSERT INTO result(user_id, result_color, question_count, white_counter, blue_counter, black_counter, red_counter, green_counter)"
+				+ " VALUES (?,?,?,?,?,?,?)";
 		if (colorResult.get("w") != null) {
 			whiteCounter = colorResult.get("w");
 		}
@@ -54,6 +51,8 @@ public class JDBCQuizDao implements QuizDao {
 		if (colorResult.get("g") != null) {
 			greenCounter = colorResult.get("g");
 		}
-		jdbcTemplate.update(sqlInsertPost, userId,whiteCounter,blueCounter,blackCounter,redCounter,greenCounter);
+		int questionCounter = colorQuiz.getQuestionCount();
+		String resultColor = colorQuiz.generateMageResult(colorResult, questionCounter).get(0);
+		jdbcTemplate.update(sqlInsertPost, userId,resultColor,questionCounter,whiteCounter,blueCounter,blackCounter,redCounter,greenCounter);
 	}	
 }
