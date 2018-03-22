@@ -17,7 +17,7 @@
 		<c:choose>
 			<c:when test="${loop.index == results.size()-1}">
 				<div class="topMargin">
-					<c:out value="For a more in-depth explanation of your result"/>
+					<c:out value="For a more in-depth explanation of your result" />
 					<a href="${string}">Click Here</a>
 				</div>
 			</c:when>
@@ -30,13 +30,19 @@
 	</c:forEach>
 
 	<div class="topMargin">
-		<c:out value="Your scores are..."/>
+		<c:out value="Your scores are..." />
 	</div>
 	<div class="">
 		<c:out value="${scores}" />
 	</div>
-	<div class="topMargin">
-		<a href="/">Return to the homepage</a>
+	<div class= "bottomLinks">
+		<div class="topMargin">
+			<a href="/">Return to the homepage</a>
+		</div>
+	<div class="topMarginLarge">
+		<a href="https://cnatsepll.github.io/portfolio/">Visit Nick's
+			Portfolio</a>
+	</div>
 	</div>
 </body>
 </html>

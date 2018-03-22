@@ -16,6 +16,9 @@ body {
 .topMargin {
 	margin-top: 10px;
 }
+.topMarginLarge{
+	margin-top: 30px;
+}
 
 .topPadding {
 	padding-top: 10px;
@@ -51,3 +54,7 @@ body {
 	border: solid 2px; */
 	background-color: #92a8d1;
 }
+.bottomLinks{
+	margin-top: 30px;
+
+ }
