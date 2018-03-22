@@ -1,41 +1,52 @@
-
-
 @media only screen and (min-device-width: 400px) and (max-device-width:
 	850px) and (-webkit-min-device-pixel-ratio: 3) {
 	body {
 		font-size: 5em;
+		margin: 30px;
 	}
 	.h1 {
 		font-size: 8em;
 	}
 }
+
+body {
+	margin: 30px;
+}
+
 .topMargin {
 	margin-top: 10px;
 }
-.topPadding{
+
+.topPadding {
 	padding-top: 10px;
 }
-.padding{
+
+.padding {
 	padding: 10px;
 }
+
 html {
 	text-align: center;
 }
+
 body {
 	font-size: 1.2em;
-	
 }
-.footer{
+
+.footer {
 	padding-top: 15em;
 	font-size: .9em;
 }
+
 .h1 {
 	font-size: 2.5em;
 }
-.button{
-	width: 7em;  
-	height: 2em;
-/* 	font-size: 1.2em;
+
+.button {
+	width: 100px;
+	height: 35px;
+	font-size: .8em;
+	/* 	
 	border-radius: 50%;
 	border: solid 2px; */
 	background-color: #92a8d1;
