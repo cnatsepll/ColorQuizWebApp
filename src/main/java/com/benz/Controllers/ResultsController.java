@@ -24,6 +24,15 @@ public class ResultsController {
 		int userId = (int) session.getAttribute("userId");
 		int questionCounter = (int) session.getAttribute("questionCounter");
 		ColorQuiz colorQuiz = (ColorQuiz) session.getAttribute("colorQuiz");
+		String quality = (String) session.getAttribute("quality");
+		int answerValue = (int) session.getAttribute("answerValue");
+		colorQuiz.storeColorResult(quality, answerValue);
+		String question = (String) session.getAttribute("question");
+		String colorKey = (String) session.getAttribute("colorKey");
+		session.setAttribute("colorResult", colorQuiz.getColorResult());
+		session.setAttribute("questionCounter", questionCounter);
+		quizDao.storeUserAnswer((int)session.getAttribute("userId"), colorKey, question, answerValue);
+		colorQuiz.removeQuestion();
 		Map<String, Integer> colorResult = (Map<String, Integer>) session.getAttribute("colorResult");
 		colorQuiz.fillColorCounters();
 		List<String> results = colorQuiz.generateMageResult(colorResult, questionCounter);

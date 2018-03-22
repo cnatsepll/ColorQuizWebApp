@@ -56,9 +56,13 @@ public class QuizController {
 	public String displayQuizPage(HttpSession session, @RequestParam int answerValue, 
 			@RequestParam String quality, @RequestParam String question, @RequestParam String colorKey){
 		ColorQuiz colorQuiz = (ColorQuiz) session.getAttribute("colorQuiz");
-		colorQuiz.storeColorResult(quality, answerValue);
 		int questionCounter = (int) session.getAttribute("questionCounter");
 		questionCounter++;
+		colorQuiz.storeColorResult(quality, answerValue);
+		session.setAttribute("quality", quality);
+		session.setAttribute("question", question);
+		session.setAttribute("answerValue", answerValue);
+		session.setAttribute("colorKey", colorKey);
 		session.setAttribute("colorResult", colorQuiz.getColorResult());
 		session.setAttribute("questionCounter", questionCounter);
 		quizDao.storeUserAnswer((int)session.getAttribute("userId"), colorKey, question, answerValue);

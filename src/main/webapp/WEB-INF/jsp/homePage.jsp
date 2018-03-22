@@ -12,12 +12,13 @@
 </head>
 <body>
 	<h1>Welcome To The Color Quiz!</h1>
-
-	<c:url var="formAction" value="/quizPageLanding" />
-	<form method="POST" action="${formAction}">
-			<div>
-				<label for="inputName topMargin">Please enter your name:</label> <span><input
-					required="required" type="text" maxlength="200" name="inputName" id="value" /></span>
+	<div>
+		<c:url var="formAction" value="/quizPageLanding" />
+		<form method="POST" action="${formAction}">
+			<div class="topMargin">
+				<label for="inputName">Please enter your name:</label> <span><input
+					required="required" type="text" maxlength="200" name="inputName"
+					id="value" /></span>
 			</div>
 			<div class="howManyQuestions topMargin">
 				<c:out value="How many questions would you like to answer?:" />
@@ -38,21 +39,27 @@
 				<c:out
 					value="The more questions answered, the more accurate your result will be." />
 			</div>
-		<div class="topMargin">
-			<label for="inputName">(Optional)Please enter a word or
-				sentence that best describes yourself:</label> <input type="text" maxlength="280"
-				name="selfDefinition" id="value" />
-		</div>
-		<input class="formSubmitButton topMargin" type="submit"
-			value="Next Page" />
-	</form>
+			<div class="topMargin">
+				<label for="inputDescription">(Optional)Please enter a word
+					or sentence that best describes yourself:</label> <input type="text"
+					maxlength="280" name="selfDefinition" id="value" />
+			</div>
+			<input class="button topMargin" type="submit"
+				value="Next Page" />
+		</form>
+	</div>
 </body>
 <footer class="footer">
-<p >Huge shoutout to these fantastic Color Pie enthusiasts and their wonderful resources.</p>
-<a class ="padding" href="https://www.lesserwrong.com/posts/KbaJsfBtdpGv7EKbC/the-mtg-color-wheel">Lesser Wrong: Color Wheel</a>
-<a class ="padding" href="https://magic.wizards.com/en/articles/archive/making-magic/pie-fights-2016-11-14">MTG Wizards</a>
-<a class ="padding" href="http://sarpadianempiresvol-viii.tumblr.com/">Sarpadian Empires</a>
-<p>Without them this quiz would not be possible.</p>
+	<p>Huge shoutout to these fantastic Color Pie enthusiasts and
+		their wonderful resources.</p>
+	<a class="padding"
+		href="https://www.lesserwrong.com/posts/KbaJsfBtdpGv7EKbC/the-mtg-color-wheel">Lesser
+		Wrong: Color Wheel</a> <a class="padding"
+		href="https://magic.wizards.com/en/articles/archive/making-magic/pie-fights-2016-11-14">MTG
+		Wizards</a> <a class="padding"
+		href="http://sarpadianempiresvol-viii.tumblr.com/">Sarpadian
+		Empires</a>
+	<p>Without them this quiz would not be possible.</p>
 
 </footer>
 </html>

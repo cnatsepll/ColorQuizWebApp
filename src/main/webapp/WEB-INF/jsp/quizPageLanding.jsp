@@ -24,7 +24,7 @@
 	<div>
 	<c:url var="formAction" value="/quizPage"/>
 	<form method="GET" action="${formAction}">
-		<input class="topMargin" class="formSubmitButton" type="submit" value="Begin Quiz!" />
+		<input class="topMargin button" type="submit" value="Begin Quiz!" />
 	</form>
 	</div>
 </body>

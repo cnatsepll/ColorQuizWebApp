@@ -3,10 +3,10 @@
 @media only screen and (min-device-width: 400px) and (max-device-width:
 	850px) and (-webkit-min-device-pixel-ratio: 3) {
 	body {
-		font-size: 5rem;
+		font-size: 5em;
 	}
 	.h1 {
-		font-size: 8rem;
+		font-size: 8em;
 	}
 }
 .topMargin {
@@ -22,7 +22,7 @@ html {
 	text-align: center;
 }
 body {
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	
 }
 .footer{
@@ -30,5 +30,13 @@ body {
 	font-size: .9em;
 }
 .h1 {
-	font-size: 2.5rem;
+	font-size: 2.5em;
+}
+.button{
+	width: 7em;  
+	height: 2em;
+/* 	font-size: 1.2em;
+	border-radius: 50%;
+	border: solid 2px; */
+	background-color: #92a8d1;
 }
