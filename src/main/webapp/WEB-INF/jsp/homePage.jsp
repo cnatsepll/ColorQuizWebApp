@@ -20,7 +20,7 @@
 					required="required" type="text" maxlength="200" name="inputName"
 					id="value" /></span>
 			</div>
-			<div class="howManyQuestions topMargin">
+			<div class="howManyQuestions topMarginMedium">
 				<c:out value="How many questions would you like to answer?:" />
 
 				<select name="questionCount" class="tab topMargin">

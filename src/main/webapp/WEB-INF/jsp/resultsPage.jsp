@@ -21,7 +21,7 @@
 				</div>
 			</c:when>
 			<c:when test="${loop.index == results.size()-1}">
-				<div class=" padding topMarginMedium">
+				<div class="padding topMarginMedium">
 					<c:out value="For a more in-depth explanation of your result" />
 					<a href="${string}">Click Here</a>
 				</div>

@@ -13,7 +13,7 @@
 	<h1>Your questions are one click away</h1>
 	<div class="topMarginLarge" >
 	<c:out value="The following questions will present you with 
-	a word, and will ask you how strongly, or closely you associate with it"/>
+	a word, and will ask you how strongly, or closely you associate with it."/>
 	</div>
 	<div class="topMarginMedium">
 	<c:out  value="Meaning: \"How well does the shown word fit into your personality or habits?\" "/>
