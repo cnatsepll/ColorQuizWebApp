@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.benz.quizApp.ColorQuiz;
 import com.benz.quizClasses.QuizDao;
@@ -20,18 +21,18 @@ public class ResultsController {
 	QuizDao quizDao;
 	
 	@RequestMapping(path="/resultsPage", method=RequestMethod.POST)
-	public String displayResultsPage(HttpSession session) {
-		int userId = (int) session.getAttribute("userId");
-		int questionCounter = (int) session.getAttribute("questionCounter");
+	public String displayResultsPage(HttpSession session, @RequestParam int answerValue, 
+			@RequestParam String quality, @RequestParam String question, @RequestParam String colorKey){
 		ColorQuiz colorQuiz = (ColorQuiz) session.getAttribute("colorQuiz");
-		String quality = (String) session.getAttribute("quality");
-		int answerValue = (int) session.getAttribute("answerValue");
+		int questionCounter = (int) session.getAttribute("questionCounter");
+		questionCounter++;
 		colorQuiz.storeColorResult(quality, answerValue);
-		String question = (String) session.getAttribute("question");
-		String colorKey = (String) session.getAttribute("colorKey");
+		session.setAttribute("quality", quality);
+		session.setAttribute("question", question);
+		session.setAttribute("answerValue", answerValue);
+		session.setAttribute("colorKey", colorKey);
 		session.setAttribute("colorResult", colorQuiz.getColorResult());
 		session.setAttribute("questionCounter", questionCounter);
-		quizDao.storeUserAnswer((int)session.getAttribute("userId"), colorKey, question, answerValue);
 		colorQuiz.removeQuestion();
 		Map<String, Integer> colorResult = (Map<String, Integer>) session.getAttribute("colorResult");
 		colorQuiz.fillColorCounters();
@@ -39,7 +40,8 @@ public class ResultsController {
 		String scores = colorQuiz.returnScores(questionCounter);
 		session.setAttribute("scores", scores);
 		session.setAttribute("results", results);
-		quizDao.storeUserFinalResults(userId, colorResult, colorQuiz, questionCounter);
+		quizDao.storeUserAnswer((int)session.getAttribute("userId"), colorKey, question, answerValue);
+		quizDao.storeUserFinalResults((int)session.getAttribute("userId"), colorResult, colorQuiz, questionCounter);
 		return "redirect:/resultsPage";
 	}
 	@RequestMapping(path="/resultsPage", method=RequestMethod.GET)

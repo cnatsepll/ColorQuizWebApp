@@ -145,7 +145,7 @@ public class Quiz {
 				|| redCounter == firstPlace && greenCounter == secondPlace && blackCounter == thirdPlace
 				|| greenCounter == firstPlace && blackCounter == secondPlace && redCounter == thirdPlace
 				|| greenCounter == firstPlace && redCounter == secondPlace && blackCounter == thirdPlace)
-				&& (secondPlace *.9) <= thirdPlace) {
+				&& (secondPlace *.89) <= thirdPlace) {
 			mage.add("You are a Mage of The Jund Shard.");
 			mage.add("Jund is a combination of the Red, Green and Black colors.");
 			mage.add("Red wants freedom.");
@@ -161,7 +161,7 @@ public class Quiz {
 				|| blueCounter == firstPlace && greenCounter == secondPlace && whiteCounter == thirdPlace
 				|| greenCounter == firstPlace && whiteCounter == secondPlace && blueCounter == thirdPlace
 				|| greenCounter == firstPlace && blueCounter == secondPlace && whiteCounter == thirdPlace)
-				&& (secondPlace *.9) <= thirdPlace) {
+				&& (secondPlace *.89) <= thirdPlace) {
 			mage.add("You are a Mage of The Bant Shard.");
 			mage.add("Bant is a combination of the White, Green, and Blue colors.");
 			mage.add("White wants peace.");
@@ -177,7 +177,7 @@ public class Quiz {
 				|| redCounter == firstPlace && blueCounter == secondPlace && blackCounter == thirdPlace
 				|| blueCounter == firstPlace && blackCounter == secondPlace && redCounter == thirdPlace
 				|| blueCounter == firstPlace && redCounter == secondPlace && blackCounter == thirdPlace)
-				&& (secondPlace *.9) <= thirdPlace) {
+				&& (secondPlace *.89) <= thirdPlace) {
 			mage.add("You are a Mage of The Grixis Shard");
 			mage.add("Grixis is a combination of Black, Blue, and Red.");
 			mage.add("Black wants power.");
@@ -193,7 +193,7 @@ public class Quiz {
 				|| redCounter == firstPlace && greenCounter == secondPlace && whiteCounter == thirdPlace
 				|| greenCounter == firstPlace && whiteCounter == secondPlace && redCounter == thirdPlace
 				|| greenCounter == firstPlace && redCounter == secondPlace && whiteCounter == thirdPlace)
-				&& (secondPlace *.9) <= thirdPlace) {
+				&& (secondPlace *.89) <= thirdPlace) {
 			mage.add("You are a Mage of The Naya Shard.");
 			mage.add("Naya is a combination of Green, White, and Red.");
 			mage.add("Green wants harmony.");
@@ -209,7 +209,7 @@ public class Quiz {
 				|| whiteCounter == firstPlace && blueCounter == secondPlace && blackCounter == thirdPlace
 				|| blueCounter == firstPlace && blackCounter == secondPlace && whiteCounter == thirdPlace
 				|| blueCounter == firstPlace && whiteCounter == secondPlace && blackCounter == thirdPlace)
-				&& (secondPlace *.9) <= thirdPlace) {
+				&& (secondPlace *.89) <= thirdPlace) {
 			mage.add("You are a Mage of The Esper Shard.");
 			mage.add("Esper is a combination of Blue, Black, and White.");
 			mage.add("Blue wants perfection");
@@ -225,7 +225,7 @@ public class Quiz {
 				|| whiteCounter == firstPlace && blueCounter == secondPlace && redCounter == thirdPlace
 				|| blueCounter == firstPlace && redCounter == secondPlace && whiteCounter == thirdPlace
 				|| blueCounter == firstPlace && whiteCounter == secondPlace && redCounter == thirdPlace)
-				&& (secondPlace *.9) <= thirdPlace) {
+				&& (secondPlace *.89) <= thirdPlace) {
 			mage.add("You are a Mage of The Jeskai Way");
 			mage.add("Jeskai is a combination of Blue, Red, and White.");
 			mage.add("Blue wants perfection");
@@ -241,7 +241,7 @@ public class Quiz {
 				|| whiteCounter == firstPlace && blackCounter == secondPlace && redCounter == thirdPlace
 				|| blackCounter == firstPlace && redCounter == secondPlace && whiteCounter == thirdPlace
 				|| blackCounter == firstPlace && whiteCounter == secondPlace && redCounter == thirdPlace)
-				&& (secondPlace *.9) <= thirdPlace) {
+				&& (secondPlace *.89) <= thirdPlace) {
 			mage.add("You are a Mage of The Mardu Horde.");
 			mage.add("Mardu is a combination of Red, White, and Black.");
 			mage.add("Red wants freedom.");
@@ -257,7 +257,7 @@ public class Quiz {
 				|| blueCounter == firstPlace && greenCounter == secondPlace && blackCounter == thirdPlace
 				|| greenCounter == firstPlace && blackCounter == secondPlace && blueCounter == thirdPlace
 				|| greenCounter == firstPlace && blueCounter == secondPlace && blackCounter == thirdPlace)
-				&& (secondPlace *.9) <= thirdPlace) {
+				&& (secondPlace *.89) <= thirdPlace) {
 			mage.add("You are a Mage of The Sultai Brood.");
 			mage.add("Sultai is a combination of Black, Blue and Green.");
 			mage.add("Black wants power.");
@@ -273,7 +273,7 @@ public class Quiz {
 				|| redCounter == firstPlace && greenCounter == secondPlace && blueCounter == thirdPlace
 				|| greenCounter == firstPlace && blueCounter == secondPlace && redCounter == thirdPlace
 				|| greenCounter == firstPlace && redCounter == secondPlace && blueCounter == thirdPlace)
-				&& (secondPlace *.9) <= thirdPlace) {
+				&& (secondPlace *.89) <= thirdPlace) {
 			mage.add("You are a Mage of The Temur Frontier.");
 			mage.add("Temur is a combination of Green, Red, and Blue.");
 			mage.add("Green wants harmony.");
@@ -289,7 +289,7 @@ public class Quiz {
 				|| whiteCounter == firstPlace && greenCounter == secondPlace && blackCounter == thirdPlace
 				|| greenCounter == firstPlace && blackCounter == secondPlace && whiteCounter == thirdPlace
 				|| greenCounter == firstPlace && whiteCounter == secondPlace && blackCounter == thirdPlace)
-				&& (secondPlace *.9) <= thirdPlace) {
+				&& (secondPlace *.89) <= thirdPlace) {
 			mage.add("You are a Mage of The Azban Houses.");
 			mage.add("Azban is a combination of White, Green, and Black");
 			mage.add("White wants peace.");
@@ -317,7 +317,7 @@ public class Quiz {
 			
 		} else if (whiteCounter == firstPlace && blackCounter == secondPlace) {
 			mage.add("You are a White/Black Mage (Welcome to the Orzhov Syndicate).");
-			mage.add("A White/Black Mage asks the question who's in my circle of concern? The colors White and Black combine to form tribalism—the \"us versus them\" mentality. Think Don Corleone and the other gangsters from The Godfather—a strict system of codes and honor within the group, and almost total impunity with outsiders. You can also see the white/black ingroup-outgroup dynamic in certain swaths of social justice culture—there are activists who implicitly hold a scarcity mindset and believe that social progress is largely a zero-sum game, and thus react poorly when other causes threaten to steal the spotlight and siphon off society's attention, sympathy, and resources.");
+			mage.add("A White/Black Mage asks the question who's in my circle of concern? The colors White and Black combine to form tribalism—the \"us versus them\" mentality. Think Don Corleone and the other gangsters from The Godfather—a strict system of codes and honor within the group, and almost total impunity with outsiders. You can also see the white/black ingroup-outgroup dynamic in certain swaths of social justice culture.");
 			mage.add("White wants peace.");
 			mage.add("White wants to create a world where there is no unnecessary suffering, a world where life is as good as it can be for each individual. The key to making this happen is teaching individuals the importance of taking actions which benefit the group as a whole, even if those actions might not benefit them personally.");
 			mage.add("White does want as many as possible to understand its motives and share them. But white realizes that in order to accomplish its larger goal, some individuals will have to be lead down the path rather than venture there of their own accord.");	
@@ -394,7 +394,7 @@ public class Quiz {
 			
 		} else if (blackCounter == firstPlace && whiteCounter == secondPlace) {
 			mage.add("You are a Black/White Mage (Welcome to the Orzhov Syndicate).");
-			mage.add("A Black/White Mage asks the question who's in my circle of concern? The colors White and Black combine to form tribalism—the \"us versus them\" mentality. Think Don Corleone and the other gangsters from The Godfather—a strict system of codes and honor within the group, and almost total impunity with outsiders. You can also see the white/black ingroup-outgroup dynamic in certain swaths of social justice culture, there are activists who implicitly hold a scarcity mindset and believe that social progress is largely a zero-sum game, and thus react poorly when other causes threaten to steal the spotlight and siphon off society's attention, sympathy, and resources.");
+			mage.add("A White/Black Mage asks the question who's in my circle of concern? The colors White and Black combine to form tribalism—the \"us versus them\" mentality. Think Don Corleone and the other gangsters from The Godfather—a strict system of codes and honor within the group, and almost total impunity with outsiders. You can also see the white/black ingroup-outgroup dynamic in certain swaths of social justice culture.");
 			mage.add("Black wants power.");
 			mage.add("Black believes it is the only realist, the only color to look and see the world as it is. An individual is free to have whatever they want, provided they have the power to obtain and keep it. This makes power the most important resource, because it's the one thing that can guarantee your ability to control your life and thus your happiness.");
 			mage.add("Black's philosophy is very simple: There's no one better suited to look after your own interests than you. Therefore, if everyone looks out after their own interests, you've created a system where everyone has someone looking out for them. In addition, black's system allows everyone the opportunity to succeed. Will everyone succeed? Of course not—but once again, that's not black's doing. That's just how the world works.");
