@@ -24,7 +24,7 @@
 				<c:out value="How many questions would you like to answer?:" />
 
 				<select name="questionCount" class="tab topMargin">
-					<option value="10">10</option>
+					<option value="15">15</option>
 					<option value="25">25</option>
 					<option value="50">50</option>
 					<option value="75">75</option>
