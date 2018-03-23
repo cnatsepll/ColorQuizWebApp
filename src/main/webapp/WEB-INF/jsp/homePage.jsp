@@ -46,12 +46,14 @@
 					sentence that best describes yourself:</label> <input type="text"
 					maxlength="280" name="selfDefinition" id="value" />
 			</div>
+			<div class="padding">
 			<input class="button topMarginLarge" type="submit" value="Next Page" />
+			</div>
 		</form>
 	</div>
 </body>
 <footer class="footer">
-	<p>Huge shoutout to these fantastic Color Pie enthusiasts and their
+	<p>Huge shoutout and thank you to these fellow Color Pie enthusiasts and their
 		wonderful resources.</p>
 	<a class="padding"
 		href="https://www.lesserwrong.com/posts/KbaJsfBtdpGv7EKbC/the-mtg-color-wheel">Lesser
@@ -60,7 +62,7 @@
 		Wizards</a> <a class="padding"
 		href="http://sarpadianempiresvol-viii.tumblr.com/">Sarpadian
 		Empires</a>
-	<p>Without them this quiz would not be possible.</p>
+	<p>The answer descriptions come from the sources linked above and without them this quiz would not be possible.</p>
 
 </footer>
 </html>
