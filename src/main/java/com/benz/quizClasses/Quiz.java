@@ -103,35 +103,35 @@ public class Quiz {
 			mage.add("https://www.lesserwrong.com/posts/KbaJsfBtdpGv7EKbC/the-mtg-color-wheel");
 			
 			// monocolor
-		} else if (whiteCounter == firstPlace && (firstPlace *.7) >= secondPlace) {
+		} else if (whiteCounter == firstPlace && (firstPlace *.72) > secondPlace) {
 			mage.add("You are a Mono White Mage, all for one one for all.");
 			mage.add("White wants peace.");
 			mage.add("A White Mage, when presented with a decision or quandary, asks what is the right course of action to take, where \"right\" depends on their moral or cultural framework.");
 			mage.add("White wants to create a world where there is no unnecessary suffering, a world where life is as good as it can be for each individual. The key to making this happen is teaching individuals the importance of taking actions which benefit the group as a whole, even if those actions might not benefit them personally.");
 			mage.add("White does want as many as possible to understand its motives and share them. But white realizes that in order to accomplish its larger goal, some individuals will have to be lead down the path rather than venture there of their own accord.");
 			mage.add("https://magic.wizards.com/en/articles/archive/making-magic/great-white-way-revisited-2015-07-13");
-		} else if (blueCounter == firstPlace && (firstPlace *.7) >= secondPlace) {
+		} else if (blueCounter == firstPlace && (firstPlace *.72) > secondPlace) {
 			mage.add("You are a Mono Blue Mage, stay curoius.");
 			mage.add("Blue wants perfection");
 			mage.add("A Blue Mage, when presented with a decision or quandary, asks what course of action makes the most sense, where \"sense\" is determined by careful thought and the application of knowledge and expertise.");
 			mage.add("Blue believes that each and every one of us is born a blank slate with the potential to become anything. The entire point of life is figuring out what you could achieve with the right education, experience, and tools. Note that this is not a task with an end goal, but one that continues throughout your life. There will always be things you can do to improve, change, or adapt. The journey of life is one of constant discovery as you keep seeking to better yourself.");
 			mage.add("Much as blue wishes to perfect itself, it also wants to perfect the world it lives in. Part of this is to ensure that blue has access to the resources it needs, but part of it is the belief that an element of reaching one's potential is living within a world that has reached its own potential. As such, blue is the color most interested in technology and wants the latest and greatest version of whatever it is using.");
 			mage.add("https://magic.wizards.com/en/articles/archive/making-magic/true-blue-revisited-2015-07-20");
-		} else if (blackCounter == firstPlace && (firstPlace *.7) >= secondPlace) {
+		} else if (blackCounter == firstPlace && (firstPlace *.72) > secondPlace) {
 			mage.add("You are a Mono Black Mage, be uninhibited.");
 			mage.add("Black wants power.");
 			mage.add("A Black Mage, when presented with a decision or quandary, asks what course of action will leave me best off, where \"best off\" includes having power, influence, safety, and wealth, as well as having moved closer to one's goals.");
 			mage.add("Black believes it is the only realist, the only color to look and see the world as it is. An individual is free to have whatever they want, provided they have the power to obtain and keep it. This makes power the most important resource, because it's the one thing that can guarantee your ability to control your life and thus your happiness.");
 			mage.add("Black's philosophy is very simple: There's no one better suited to look after your own interests than you. Therefore, if everyone looks out after their own interests, you've created a system where everyone has someone looking out for them. In addition, black's system allows everyone the opportunity to succeed. Will everyone succeed? Of course not—but once again, that's not black's doing. That's just how the world works.");
 			mage.add("https://magic.wizards.com/en/articles/archive/making-magic/black-revisited-2015-07-27");
-		} else if (redCounter == firstPlace && (firstPlace *.7) >= secondPlace) {
+		} else if (redCounter == firstPlace && (firstPlace *.72) > secondPlace) {
 			mage.add("You are a Mono Red Mage, stay true to yourself.");
 			mage.add("Red wants freedom.");
 			mage.add("A Red Mage, when presented with a decision or quandary, asks what do I feel like doing?");
 			mage.add("Everyone seems preoccupied with the meaning of life. Red's not, because red already knows the answer. You see, your heart tells you what it needs in order to be fulfilled. All you have to do is listen to it and act accordingly. It's not a mystery. You are literally bombarded with constant feelings that guide you down the correct path. The problem is all the other colors ignore the message.");
 			mage.add("To outsiders, red might seem a bit chaotic; but that's only because others can't see what's in red's heart. They cannot feel red's emotions guiding them. Living life to its fullest takes a lot of dedication and perseverance, but red is always up to the task.");
 			mage.add("https://magic.wizards.com/en/articles/archive/making-magic/seeing-red-revisited-2015-08-03");
-		} else if (greenCounter == firstPlace && (firstPlace *.7) >= secondPlace) {
+		} else if (greenCounter == firstPlace && (firstPlace *.72) > secondPlace) {
 			mage.add("You are a Mono Green Mage, one with the world.");
 			mage.add("Green wants harmony.");
 			mage.add("A Green Mage, when presented with a decision or quandary, asks how are these things usually done? What is the established wisdom?");
