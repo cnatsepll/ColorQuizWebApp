@@ -25,7 +25,6 @@ public class ResultsController {
 			@RequestParam String quality, @RequestParam String question, @RequestParam String colorKey){
 		ColorQuiz colorQuiz = (ColorQuiz) session.getAttribute("colorQuiz");
 		int questionCounter = (int) session.getAttribute("questionCounter");
-		questionCounter++;
 		colorQuiz.storeColorResult(quality, answerValue);
 		session.setAttribute("quality", quality);
 		session.setAttribute("question", question);
