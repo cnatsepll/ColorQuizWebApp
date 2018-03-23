@@ -11,12 +11,17 @@
 <title>Your Results</title>
 </head>
 <body>
-	<h1>Here are your results!</h1>
+	<div class="underlined"><h1>Here are your results!</h1></div>
 
 	<c:forEach var="string" items="${results}" varStatus="loop">
 		<c:choose>
+			<c:when test="${loop.index == 0}">
+			<div class="topMarginLarge bold">
+					<c:out value="${string}" />
+				</div>
+			</c:when>
 			<c:when test="${loop.index == results.size()-1}">
-				<div class="topMarginMedium">
+				<div class=" padding topMarginMedium">
 					<c:out value="For a more in-depth explanation of your result" />
 					<a href="${string}">Click Here</a>
 				</div>
@@ -29,20 +34,20 @@
 		</c:choose>
 	</c:forEach>
 
-	<div class="topMarginLarge">
+	<div class="topMarginMedium bold">
 		<c:out value="Your scores are..." />
 	</div>
-	<div class="">
+	<div class="scores">
 		<c:out value="${scores}" />
 	</div>
-	<div class= "bottomLinks">
-		<div class="topMarginMedium">
-			<a href="/">Return to the homepage</a>
+	<div class="bottomLinks">
+		<div class="topPadding topMarginLarge">
+			<a href="/">Return to the Homepage</a>
 		</div>
-	<div class="topMarginLarge">
-		<a href="https://cnatsepll.github.io/portfolio/">Visit My
-			Portfolio</a>
-	</div>
+		<div class="topPadding topMarginLarge">
+			<a href="https://cnatsepll.github.io/portfolio/">Visit My
+				Portfolio</a>
+		</div>
 	</div>
 </body>
 </html>

@@ -12,10 +12,10 @@
 </head>
 <body>
 	<h1>Welcome To The Color Quiz!</h1>
-	<div>
+	<div class= "container">
 		<c:url var="formAction" value="/quizPageLanding" />
 		<form method="POST" action="${formAction}">
-			<div class="topMargin">
+			<div class="topMarginLarge">
 				<label for="inputName">Please enter your name:</label> <span><input
 					required="required" type="text" maxlength="200" name="inputName"
 					id="value" /></span>
@@ -34,19 +34,19 @@
 					<option value="250">250</option>
 				</select>
 			</div>
-			<div class="topMargin">
+			<div class="topMarginMedium">
 				<c:out
 					value="The more questions answered, the more accurate your result will be." />
 			</div>
 			<div class="smallText">
 				<c:out value="(Quiz time is roughly 3 seconds per question)" />
 			</div>
-			<div class="topMargin">
+			<div class="topMarginMedium">
 				<label for="inputDescription">(Optional) Enter a word or
 					sentence that best describes yourself:</label> <input type="text"
 					maxlength="280" name="selfDefinition" id="value" />
 			</div>
-			<input class="button topMarginMedium" type="submit" value="Next Page" />
+			<input class="button topMarginLarge" type="submit" value="Next Page" />
 		</form>
 	</div>
 </body>

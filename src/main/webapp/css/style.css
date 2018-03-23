@@ -1,31 +1,31 @@
-@media only screen and (min-device-width: 400px) and (max-device-width:
-	850px) and (-webkit-min-device-pixel-ratio: 3) {
-	body {
-		font-size: 5em;
-		margin: 30px;
-	}
-	.h1 {
-		font-size: 8em;
-	}
+html, body {
+	margin: auto;
+	width: 90%;
+	height: 92%;
 }
 
-body {
-	margin:auto;
-	width: 80%;
+.container {
+	min-height: 80%;
 }
 
+.footer {
+	height: 20%;
+	font-size: .9em;
+}
 .topMargin {
 	margin-top: 12px;
 }
-.topMarginMedium{
+
+.topMarginMedium {
 	margin-top: 20px;
 }
-.topMarginLarge{
-	margin-top: 35px;
+
+.topMarginLarge {
+	margin-top: 45px;
 }
 
 .topPadding {
-	padding-top: 10px;
+	padding-top: 15px;
 }
 
 .padding {
@@ -40,9 +40,8 @@ body {
 	font-size: 1.2em;
 }
 
-.footer {
-	padding-top: 10em;
-	font-size: .9em;
+.scores{
+	font-size: 1.1em;
 }
 
 .h1 {
@@ -53,14 +52,28 @@ body {
 	width: 100px;
 	height: 35px;
 	font-size: .8em;
-	/* 	
-	border-radius: 50%;
-	border: solid 2px; */
 	background-color: #92a8d1;
 }
-.bottomLinks{
+
+.bottomLinks {
 	margin-top: 30px;
- }
-.smallText{
+}
+
+.smallText {
 	font-size: .86em;
+}
+.bold{
+	font-size: 1em;
+	font-weight: 600;
+}
+.big{
+	font-size: 1.2em;
+}
+.quizChoiceButton{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.underlined{
+	text-decoration: underline;
+	
 }
