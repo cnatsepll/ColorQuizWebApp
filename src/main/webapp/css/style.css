@@ -10,14 +10,18 @@
 }
 
 body {
-	margin: 30px;
+	margin:auto;
+	width: 80%;
 }
 
 .topMargin {
-	margin-top: 10px;
+	margin-top: 12px;
+}
+.topMarginMedium{
+	margin-top: 20px;
 }
 .topMarginLarge{
-	margin-top: 30px;
+	margin-top: 35px;
 }
 
 .topPadding {
@@ -37,7 +41,7 @@ body {
 }
 
 .footer {
-	padding-top: 15em;
+	padding-top: 10em;
 	font-size: .9em;
 }
 
@@ -56,5 +60,7 @@ body {
 }
 .bottomLinks{
 	margin-top: 30px;
-
  }
+.smallText{
+	font-size: .86em;
+}

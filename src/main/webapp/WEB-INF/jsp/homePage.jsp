@@ -38,19 +38,21 @@
 				<c:out
 					value="The more questions answered, the more accurate your result will be." />
 			</div>
+			<div class="smallText">
+				<c:out value="(Quiz time is roughly 3 seconds per question)" />
+			</div>
 			<div class="topMargin">
-				<label for="inputDescription">(Optional)Please enter a word
-					or sentence that best describes yourself:</label> <input type="text"
+				<label for="inputDescription">(Optional) Enter a word or
+					sentence that best describes yourself:</label> <input type="text"
 					maxlength="280" name="selfDefinition" id="value" />
 			</div>
-			<input class="button topMargin" type="submit"
-				value="Next Page" />
+			<input class="button topMarginMedium" type="submit" value="Next Page" />
 		</form>
 	</div>
 </body>
 <footer class="footer">
-	<p>Huge shoutout to these fantastic Color Pie enthusiasts and
-		their wonderful resources.</p>
+	<p>Huge shoutout to these fantastic Color Pie enthusiasts and their
+		wonderful resources.</p>
 	<a class="padding"
 		href="https://www.lesserwrong.com/posts/KbaJsfBtdpGv7EKbC/the-mtg-color-wheel">Lesser
 		Wrong: Color Wheel</a> <a class="padding"
