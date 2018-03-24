@@ -41,6 +41,7 @@ public class QuizController {
 		int userId = newUser.getUserId();
 		ColorQuiz colorQuiz = new ColorQuiz(dataSource);
 		colorQuiz.run(userId);
+		session.setAttribute("name", inputName);
 		session.setAttribute("userId", userId);
 		session.setAttribute("questionCounter", questionCounter);
 		session.setAttribute("colorQuiz", colorQuiz);

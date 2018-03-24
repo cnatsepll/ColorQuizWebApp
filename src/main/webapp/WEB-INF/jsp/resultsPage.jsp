@@ -35,7 +35,7 @@
 	</c:forEach>
 
 	<div class="topMarginMedium bold">
-		<c:out value="Your scores are..." />
+		<c:out value="${name}, your scores are..." />
 	</div>
 	<div class="scores">
 		<c:out value="${scores}" />
