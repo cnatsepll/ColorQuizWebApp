@@ -47,12 +47,11 @@
 					<option value="225">225</option>
 				</select>
 			</div>
-
-			<div class="topMarginMedium">
-				<label for="inputDescription">(Optional) Enter a word or
-					sentence that best describes yourself:</label> <input type="text"
-					maxlength="280" name="selfDefinition" id="value" class="inputText" />
-			</div>
+<!-- (Optional) Enter a word or sentence that best describes yourself:
+ --> 			<div class="">
+				<label for="inputDescription"></label> <input type="hidden"
+					maxlength="280" name="selfDefinition" id="value" class="optional" />
+			</div> 
 			<div class="padding">
 				<input class="button topMarginLarge" type="submit" value="Next Page" />
 			</div>

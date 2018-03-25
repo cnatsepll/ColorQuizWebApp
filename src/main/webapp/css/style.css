@@ -50,11 +50,39 @@ body {
 	font-size: 2.5em;
 }
 
-.button {
+/* .button {
 	width: 120px;
 	height: 45px;
 	font-size: .87em;
 	background-color: #cde4f3;
+} */
+.button {
+	width: 120px;
+	height: 45px;
+	font-size: .87em;
+	background-color: #004E9D;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+.button:hover {
+	text-decoration: none;
+}
+
+.button:active {
+	position: relative;
+	top: 1px;
 }
 
 .bottomLinks {
@@ -88,7 +116,17 @@ body {
 	width: 200px;
 	font-size: 14pt;
 	border: solid 2px;
-	border-color: rgba(15, 15, 155, 0.74);
+	border-color: rgb(1, 73, 145);
+	border-radius: 10px;
+	font-family: Raleway;
+}
+
+.optional {
+	padding: 5px;
+	width: 200px;
+	font-size: 14pt;
+	border: solid 2px;
+	border-color: rgba(0, 0, 0, 0.34);
 	border-radius: 10px;
 	font-family: Raleway;
 }
@@ -112,10 +150,9 @@ body {
 }
 
 @media ( min-width : 600px) {
-
 	.quizButtonRow {
 		display: flex;
-		flex-direction:  row;
+		flex-direction: row;
 		justify-content: center;
 	}
 	.quizChoiceButton {
