@@ -47,11 +47,12 @@
 					<option value="225">225</option>
 				</select>
 			</div>
-<!-- (Optional) Enter a word or sentence that best describes yourself:
- --> 			<div class="">
+			<!-- (Optional) Enter a word or sentence that best describes yourself:
+ -->
+			<div class="">
 				<label for="inputDescription"></label> <input type="hidden"
 					maxlength="280" name="selfDefinition" id="value" class="optional" />
-			</div> 
+			</div>
 			<div class="padding">
 				<input class="button topMarginLarge" type="submit" value="Next Page" />
 			</div>
@@ -61,13 +62,22 @@
 <footer class="footer">
 	<p>Huge shoutout and thank you to these fellow Color Pie
 		enthusiasts and their wonderful resources.</p>
-	<a class="padding"
-		href="https://www.lesserwrong.com/posts/KbaJsfBtdpGv7EKbC/the-mtg-color-wheel">Lesser
-		Wrong: Color Wheel</a> <a class="padding"
-		href="https://magic.wizards.com/en/articles/archive/making-magic/pie-fights-2016-11-14">MTG
-		Wizards</a> <a class="padding"
-		href="http://sarpadianempiresvol-viii.tumblr.com/">Sarpadian
-		Empires</a>
+	<div class="linkRow">
+		<div class="padding">
+			<a
+				href="https://www.lesserwrong.com/posts/KbaJsfBtdpGv7EKbC/the-mtg-color-wheel">Lesser
+				Wrong: Color Wheel</a>
+		</div>
+		<div class="padding">
+			<a
+				href="https://magic.wizards.com/en/articles/archive/making-magic/pie-fights-2016-11-14">MTG
+				Wizards</a>
+		</div>
+		<div class="padding">
+			<a href="http://sarpadianempiresvol-viii.tumblr.com/">Sarpadian
+				Empires</a>
+		</div>
+	</div>
 	<p>The answer descriptions come from the sources linked above and
 		without them this quiz would not be possible.</p>
 
