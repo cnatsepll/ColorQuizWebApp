@@ -51,10 +51,10 @@ body {
 }
 
 .button {
-	width: 100px;
-	height: 35px;
-	font-size: .8em;
-	background-color: #92a8d1;
+	width: 120px;
+	height: 45px;
+	font-size: .87em;
+	background-color: #cde4f3;
 }
 
 .bottomLinks {
@@ -84,101 +84,41 @@ body {
 }
 
 .inputText {
+	padding: 5px;
 	width: 200px;
 	font-size: 14pt;
 	border: solid 2px;
-	border-color: blue;
+	border-color: rgba(15, 15, 155, 0.74);
+	border-radius: 10px;
+	font-family: Raleway;
 }
 
 .questionChoice {
 	width: 100px;
-	font-size: 12pt;
+	font-size: 14pt;
 }
 
 .questionChoice option {
-	width: 4em;
-	font-size: 12pt;
+	font-size: 14pt;
 }
 
-/* @media ( min-width : 600px) {
-	html, body {
-		margin: auto;
-		width: 92%;
-		height: 91%;
-		font-family: Helvetica;
-	}
-	.container {
-		min-height: 80%;
-	}
-	.footer {
-		height: 20%;
-		font-size: .9em;
-	}
-	.topMargin {
-		margin-top: 12px;
-	}
-	.topMarginMedium {
-		margin-top: 20px;
-	}
-	.topMarginLarge {
-		margin-top: 45px;
-	}
-	.topPadding {
-		padding-top: 15px;
-	}
-	.padding {
-		padding: 10px;
-	}
-	html {
-		text-align: center;
-	}
-	body {
-		font-size: 1.2em;
-	}
-	.scores {
-		font-size: 1.1em;
-	}
-	.h1 {
-		font-size: 2.5em;
-	}
-	.button {
-		width: 100px;
-		height: 35px;
-		font-size: .8em;
-		background-color: #92a8d1;
-	}
-	.bottomLinks {
-		margin-top: 30px;
-	}
-	.smallText {
-		font-size: .86em;
-	}
-	.bold {
-		font-size: 1em;
-		font-weight: 600;
-	}
-	.big {
-		font-size: 1.2em;
+.quizButtonRow {
+	display: flex;
+	flex-direction: column;
+}
+
+.quizChoiceButton {
+	padding: 10px;
+}
+
+@media ( min-width : 600px) {
+
+	.quizButtonRow {
+		display: flex;
+		flex-direction:  row;
+		justify-content: center;
 	}
 	.quizChoiceButton {
-		padding-left: 5px;
-		padding-right: 5px;
+		padding: 10px;
 	}
-	.underlined {
-		text-decoration: underline;
-	}
-	.inputText {
-		width: 200px;
-		font-size: 14pt;
-		border: solid 2px;
-		border-color: blue;
-	}
-	.questionChoice {
-		width: 100px;
-		font-size: 12pt;
-	}
-	.questionChoice option {
-		width: 50px;
-		font-size: 12pt;
-	}
-} */
+}

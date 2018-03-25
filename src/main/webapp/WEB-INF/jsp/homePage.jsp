@@ -21,8 +21,8 @@
 	<div class="container">
 		<c:url var="formAction" value="/quizPageLanding" />
 		<form method="POST" action="${formAction}">
-			<div class="topMarginLarge">
-				<label for="inputName">Please enter your name:</label> <span><input
+			<div class="topMarginLarge bold">
+				<label for="inputName ">Please enter your name:</label> <span><input
 					required="required" type="text" maxlength="200" name="inputName"
 					id="value" class="inputText" /></span>
 			</div>
@@ -33,10 +33,10 @@
 			<div class="smallText">
 				<c:out value="(Quiz time is roughly 3 seconds per question)" />
 			</div>
-			<div class="howManyQuestions topMarginMedium">
+			<div class="howManyQuestions topMargin bold">
 				<c:out value="How many questions would you like to answer?" />
 
-				<select name="questionCount" class="tab topMargin questionChoice">
+				<select name="questionCount" class="tab questionChoice">
 					<option value="15">15</option>
 					<option value="25">25</option>
 					<option value="50">50</option>
